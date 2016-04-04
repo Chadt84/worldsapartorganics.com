@@ -1,5 +1,5 @@
     /* Import */
-
+    
     @import "variables.less";
     .h1 .small,
     .h1 small,
@@ -27,7 +27,7 @@
     h6 small {
         color: currentColor;
     }
-
+    
     .navbar-default .navbar-nav>li>a {
         color: currentColor;
         text-shadow: none;
@@ -39,27 +39,29 @@
             color: currentColor;
         }
     }
-
+    
     body {
         background-color: @d-main-color-light;
         height: 2000px;
     }
-
+    
     .page {
         background-color: @main-color-light;
         border: solid 1px @d-main-color;
         border-radius: 3px;
         padding: 0;
     }
-
+    
     .lead {
         background-color: @main-color-light;
+        position: relative;
+        z-index: 1;
     }
     /*small {
 background-color: fadeout(@t-main-color-dark, 30%);
 border-radius: 5px;
 }*/
-
+    
     .page-header {
         background-color: @main-color-light;
         //text-shadow: 1px 1px @d-main-color;
@@ -86,7 +88,7 @@ border-radius: 5px;
             font-size: 40px;
         }
     }
-
+    
     .navbar-nav {
         color: @text-main-color-light;
         text-shadow: none;
@@ -101,7 +103,7 @@ border-radius: 5px;
             }
         }
     }
-
+    
     .navbar-default {
         font-family: 'Lobster';
         font-size: 25px;
@@ -112,8 +114,10 @@ border-radius: 5px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-bottom: solid 7px @d-main-color;
+        position: relative;
+        z-index: 2;
     }
-
+    
     .navbar-default .navbar-toggle {
         transition: @main-transition;
         background: @main-color;
@@ -127,7 +131,7 @@ border-radius: 5px;
             color: @text-main-color-light
         }
     }
-
+    
     .navbar-default .navbar-brand {
         transition: @main-transition;
         text-shadow: none;
@@ -138,12 +142,22 @@ border-radius: 5px;
             color: @text-main-color-light;
         }
     }
-
+    
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
         border-color: @d-main-color;
     }
-
+    
+    .corner-right {
+        position: absolute;
+        z-index: 0;
+    }
+    
+    .corner-left {
+        position: absolute;
+        z-index: 0;
+    }
+    
     @media @xs {
         .navbar-nav {
             li {
@@ -174,10 +188,10 @@ border-radius: 5px;
             z-index: 0;
         }
     }
-
+    
     @media @sm {
         .navbar-default {
-            transform: scaleX(1.07);
+            transform: scaleX(1.05);
         }
         .corner-right {
             width: 0;
@@ -211,7 +225,7 @@ border-radius: 5px;
             z-index: 0;
         }
     }
-
+    
     @media @md {
         .navbar-default {
             transform: scaleX(1.055);
@@ -248,10 +262,10 @@ border-radius: 5px;
             z-index: 0;
         }
     }
-
+    
     @media @lg {
         .navbar-default {
-            transform: scaleX(1.044);
+            transform: scaleX(1.04);
         }
         .corner-right {
             width: 0;
