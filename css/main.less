@@ -1,0 +1,151 @@
+/* Import */
+
+@import "variables.less";
+.h1 .small,
+.h1 small,
+.h2 .small,
+.h2 small,
+.h3 .small,
+.h3 small,
+.h4 .small,
+.h4 small,
+.h5 .small,
+.h5 small,
+.h6 .small,
+.h6 small,
+h1 .small,
+h1 small,
+h2 .small,
+h2 small,
+h3 .small,
+h3 small,
+h4 .small,
+h4 small,
+h5 .small,
+h5 small,
+h6 .small,
+h6 small {
+    color: currentColor;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: currentColor;
+    text-shadow: none;
+    transition: none;
+    &:hover,
+    &:focus,
+    &:active {
+        text-shadow: none;
+        color: currentColor;
+    }
+}
+
+body {
+    background-color: @d-main-color-light;
+    height: 2000px;
+}
+
+.page {
+    background-color: @main-color-light;
+    border: solid 1px @d-main-color;
+    border-radius: 3px;
+    padding: 0;
+}
+
+.lead {
+    background-color: @main-color-light;
+}
+
+
+/*small {
+    background-color: fadeout(@t-main-color-dark, 30%);
+    border-radius: 5px;
+}*/
+
+.page-header {
+    background-color: @main-color-light;
+    //text-shadow: 1px 1px @d-main-color;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: none;
+    color: @main-color;
+    font-family: 'Poiret One';
+    background-color: @main-color-light;
+    //background-image: url(../img/waterfall-lg.png);
+    h2.small {
+        color: @t-main-color;
+    }
+}
+
+.navbar-nav {
+    color: @text-main-color-light;
+    text-shadow: none;
+    li {
+        transition: @main-transition;
+        background-color: @main-color;
+        border: solid 1px @main-color;
+        &:hover,
+        &:active,
+        &:focus {
+            color: @d-main-color;
+        }
+    }
+}
+
+@media @xs {
+    .navbar-nav {
+        li {
+            background-color: @main-color;
+            transition: @main-transition;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @d-main-color;
+                border: solid 1px transparent;
+                color: @darker-main-color;
+            }
+        }
+    }
+}
+
+.navbar-default {
+    font-family: 'Lobster';
+    font-size: 25px;
+    background-color: @main-color;
+    background-image: none;
+    border-color: @darker-main-color;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-toggle {
+    transition: @main-transition;
+    background: @main-color;
+    border-color: @darker-main-color;
+    color: @d-main-color;
+    &:active,
+    &:focus,
+    &:hover {
+        background: @darker-main-color;
+        border-color: @darker-main-color;
+        color: @text-main-color-light
+    }
+}
+
+.navbar-default .navbar-brand {
+    transition: @main-transition;
+    text-shadow: none;
+    color: @darker-main-color;
+    &:active,
+    &:focus,
+    &:hover {
+        color: @text-main-color-light;
+    }
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: @d-main-color;
+}
+
+
+/* END */
