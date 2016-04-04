@@ -92,29 +92,17 @@ body {
     }
 }
 
-@media @xs {
-    .navbar-nav {
-        li {
-            background-color: @main-color;
-            transition: @main-transition;
-            &:hover,
-            &:active,
-            &:focus {
-                background-color: @d-main-color;
-                border: solid 1px transparent;
-                color: @darker-main-color;
-            }
-        }
-    }
-}
-
 .navbar-default {
     font-family: 'Lobster';
     font-size: 25px;
     background-color: @main-color;
     background-image: none;
-    border-color: @darker-main-color;
     border-radius: 0;
+    border-color: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: scaleX(1.05);
+    border-bottom: solid 7px @d-main-color;
 }
 
 .navbar-default .navbar-toggle {
@@ -145,6 +133,101 @@ body {
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
     border-color: @d-main-color;
+}
+
+@media @xs {
+    .navbar-nav {
+        li {
+            background-color: @main-color;
+            transition: @main-transition;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @d-main-color;
+                border: solid 1px transparent;
+                color: @darker-main-color;
+            }
+        }
+    }
+    .navbar-default {
+        transform: scaleX(1);
+        border-radius: 0;
+    }
+}
+
+@media @lg {
+    .navbar-default {
+        transform: scaleX(1.04);
+    }
+    .corner-right {
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -26px;
+        right: 0;
+        border-top: 20px solid;
+        border-color: @d-main-color;
+        border-right: 20px solid transparent;
+    }
+    .corner-left {
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -26px;
+        left: 0;
+        border-top: 20px solid;
+        border-color: @d-main-color;
+        border-left: 20px solid transparent;
+    }
+}
+
+@media @md {
+    .corner-right {
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        right: 0;
+        border-top: 20px solid;
+        border-color: @d-main-color;
+        border-right: 20px solid transparent;
+    }
+    .corner-left {
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        border-top: 20px solid;
+        border-color: @d-main-color;
+        border-left: 20px solid transparent;
+    }
+}
+
+@media @sm {
+    .navbar-default {
+        transform: scaleX(1.07);
+    }
+    .corner-right {
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -26px;
+        right: 0;
+        border-top: 20px solid;
+        border-color: @d-main-color;
+        border-right: 20px solid transparent;
+    }
+    .corner-left {
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -26px;
+        left: 0;
+        border-top: 20px solid;
+        border-color: @d-main-color;
+        border-left: 20px solid transparent;
+    }
 }
 
 
