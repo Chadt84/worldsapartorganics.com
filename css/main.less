@@ -43,6 +43,7 @@
     body {
         background-color: @d-main-color-light;
         height: 2000px;
+        overflow-x: hidden;
     }
     
     .page {
@@ -184,7 +185,8 @@ border-radius: 5px;
             left: 0;
             border-top: 280px solid;
             border-color: @t-main-color-dark;
-            border-right: 400px solid transparent;
+            border-right: 280px solid transparent;
+            border-left: 40px solid @t-main-color-dark;
             z-index: 0;
         }
     }
