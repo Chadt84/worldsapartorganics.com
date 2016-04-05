@@ -1,295 +1,337 @@
-    /* Import */
-    
-    @import "variables.less";
-    .h1 .small,
-    .h1 small,
-    .h2 .small,
-    .h2 small,
-    .h3 .small,
-    .h3 small,
-    .h4 .small,
-    .h4 small,
-    .h5 .small,
-    .h5 small,
-    .h6 .small,
-    .h6 small,
-    h1 .small,
-    h1 small,
-    h2 .small,
-    h2 small,
-    h3 .small,
-    h3 small,
-    h4 .small,
-    h4 small,
-    h5 .small,
-    h5 small,
-    h6 .small,
-    h6 small {
-        color: currentColor;
-    }
-    
-    .navbar-default .navbar-nav>li>a {
-        color: currentColor;
-        text-shadow: none;
-        transition: none;
-        &:hover,
-        &:focus,
-        &:active {
-            text-shadow: none;
+        /* Import */
+
+        @import "variables.less";
+        .h1 .small,
+        .h1 small,
+        .h2 .small,
+        .h2 small,
+        .h3 .small,
+        .h3 small,
+        .h4 .small,
+        .h4 small,
+        .h5 .small,
+        .h5 small,
+        .h6 .small,
+        .h6 small,
+        h1 .small,
+        h1 small,
+        h2 .small,
+        h2 small,
+        h3 .small,
+        h3 small,
+        h4 .small,
+        h4 small,
+        h5 .small,
+        h5 small,
+        h6 .small,
+        h6 small {
             color: currentColor;
         }
-    }
-    
-    body {
-        background-color: @d-main-color-light;
-        height: 2000px;
-        overflow-x: hidden;
-    }
-    
-    .page {
-        background-color: @main-color-light;
-        border: solid 1px @d-main-color;
-        border-radius: 3px;
-        padding: 0;
-    }
-    
-    .lead {
-        background-color: @main-color-light;
-        position: relative;
-        z-index: 1;
-    }
-    /*small {
-background-color: fadeout(@t-main-color-dark, 30%);
-border-radius: 5px;
-}*/
-    
-    .page-header {
-        background-color: @main-color-light;
-        //text-shadow: 1px 1px @d-main-color;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        border-bottom: none;
-        color: @main-color;
-        font-family: 'Poiret One';
-        background-color: @main-color-light;
-        background-image: url(../img/waterfall-lg.png);
-        background-position: center;
-        background-size: cover;
-        h2 {
-            text-shadow: 0.2px 0.2px @main-color;
-            color: @main-color;
-            position: relative;
-            z-index: 1;
-            font-weight: bolder;
-            line-height: 0.9;
-        }
-        h1 {
-            position: relative;
-            z-index: 1;
-            font-size: 40px;
-        }
-    }
-    
-    .navbar-nav {
-        color: @text-main-color-light;
-        text-shadow: none;
-        li {
-            transition: @main-transition;
-            background-color: @main-color;
-            border: solid 1px @main-color;
+
+        .navbar-default .navbar-nav>li>a {
+            color: currentColor;
+            text-shadow: none;
+            transition: none;
             &:hover,
-            &:active,
-            &:focus {
-                color: @d-main-color;
+            &:focus,
+            &:active {
+                text-shadow: none;
+                color: currentColor;
             }
         }
-    }
-    
-    .navbar-default {
-        font-family: 'Lobster';
-        font-size: 25px;
-        background-color: @main-color;
-        background-image: none;
-        border-radius: 0;
-        border-color: transparent;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom: solid 7px @d-main-color;
-        position: relative;
-        z-index: 2;
-    }
-    
-    .navbar-default .navbar-toggle {
-        transition: @main-transition;
-        background: @main-color;
-        border-color: @darker-main-color;
-        color: @d-main-color;
-        &:active,
-        &:focus,
-        &:hover {
-            background: @darker-main-color;
-            border-color: @darker-main-color;
-            color: @text-main-color-light
+
+        body {
+            background-color: @d-main-color-light;
+            overflow-x: hidden;
         }
-    }
-    
-    .navbar-default .navbar-brand {
-        transition: @main-transition;
-        text-shadow: none;
-        color: @darker-main-color;
-        &:active,
-        &:focus,
-        &:hover {
-            color: @text-main-color-light;
+
+        .page {
+            background-color: @main-color-light;
+            border: solid 1px @d-main-color;
+            border-radius: 3px;
+            padding: 0;
         }
-    }
-    
-    .navbar-default .navbar-collapse,
-    .navbar-default .navbar-form {
-        border-color: @d-main-color;
-    }
-    
-    .corner-right {
-        position: absolute;
-        z-index: 0;
-    }
-    
-    .corner-left {
-        position: absolute;
-        z-index: 0;
-    }
-    
-    @media @xs {
+
+        .lead {
+            background-color: @main-color-light;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 5%;
+            border-radius: 8px;
+            border-bottom: solid 8px @d-main-color;
+            border-top: solid 8px @d-main-color;
+        }
+
+        .page-header {
+            background-color: @main-color-light;
+            text-shadow: 1px 1px @d-main-color;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border-bottom: none;
+            color: @main-color;
+            font-family: 'Poiret One';
+            background-color: @main-color-light;
+            background-image: url(../img/waterfall-lg.png);
+            background-position: center;
+            background-size: cover;
+            h2 {
+                text-shadow: 0.2px 0.2px @main-color;
+                color: @main-color;
+                position: relative;
+                z-index: 1;
+                font-weight: bolder;
+                line-height: 0.9;
+            }
+            h1 {
+                position: relative;
+                z-index: 1;
+                font-size: 40px;
+            }
+        }
+
         .navbar-nav {
+            color: @text-main-color-light;
+            text-shadow: none;
             li {
-                background-color: @main-color;
                 transition: @main-transition;
+                background-color: @main-color;
+                border: solid 1px @main-color;
                 &:hover,
                 &:active,
                 &:focus {
-                    background-color: @d-main-color;
-                    border: solid 1px transparent;
-                    color: @darker-main-color;
+                    color: @d-main-color;
                 }
             }
         }
+
         .navbar-default {
-            transform: scaleX(1);
+            font-family: 'Lobster';
+            font-size: 25px;
+            background-color: @main-color;
+            background-image: none;
             border-radius: 0;
+            border-color: transparent;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom: solid 7px @d-main-color;
+            position: relative;
+            z-index: 2;
         }
-        .corner-header {
-            width: 0;
-            height: 0;
+
+        .navbar-default .navbar-toggle {
+            transition: @main-transition;
+            background: @main-color;
+            border-color: @darker-main-color;
+            color: @d-main-color;
+            &:active,
+            &:focus,
+            &:hover {
+                background: @darker-main-color;
+                border-color: @darker-main-color;
+                color: @text-main-color-light
+            }
+        }
+
+        .navbar-default .navbar-brand {
+            transition: @main-transition;
+            text-shadow: none;
+            color: @darker-main-color;
+            &:active,
+            &:focus,
+            &:hover {
+                color: @text-main-color-light;
+            }
+        }
+
+        .navbar-default .navbar-collapse,
+        .navbar-default .navbar-form {
+            border-color: @d-main-color;
+        }
+
+        .corner-right {
             position: absolute;
-            top: 0;
-            left: 0;
-            border-top: 280px solid;
-            border-color: @t-main-color-dark;
-            border-right: 280px solid transparent;
-            border-left: 40px solid @t-main-color-dark;
             z-index: 0;
         }
-    }
-    
-    @media @sm {
-        .navbar-default {
-            transform: scaleX(1.05);
-        }
-        .corner-right {
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -26px;
-            right: 0;
-            border-top: 20px solid;
-            border-color: @darker-main-color;
-            border-right: 20px solid transparent;
-        }
+
         .corner-left {
-            width: 0;
-            height: 0;
             position: absolute;
-            bottom: -26px;
-            left: 0;
-            border-top: 20px solid;
-            border-color: @darker-main-color;
-            border-left: 20px solid transparent;
-        }
-        .corner-header {
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-top: 250px solid;
-            border-color: @t-main-color-dark;
-            border-right: 550px solid transparent;
             z-index: 0;
         }
-    }
-    
-    @media @md {
-        .navbar-default {
-            transform: scaleX(1.055);
+
+        @media @xs {
+            .navbar-nav {
+                li {
+                    background-color: @main-color;
+                    transition: @main-transition;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: @d-main-color;
+                        border: solid 1px transparent;
+                        color: @darker-main-color;
+                    }
+                }
+            }
+            .navbar-default {
+                transform: scaleX(1);
+                border-radius: 0;
+            }
+            .corner-header {
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-top: 280px solid;
+                border-color: @t-main-color-dark;
+                border-right: 280px solid transparent;
+                border-left: 40px solid @t-main-color-dark;
+                z-index: 0;
+            }
         }
-        .corner-right {
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -26px;
-            right: 0;
-            border-top: 20px solid;
-            border-color: @darker-main-color;
-            border-right: 20px solid transparent;
+
+        @media @sm {
+            .navbar-default {
+                transform: scaleX(1.05);
+            }
+            .corner-right {
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -26px;
+                right: 0;
+                border-top: 20px solid;
+                border-color: @darker-main-color;
+                border-right: 20px solid transparent;
+            }
+            .corner-left {
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -26px;
+                left: 0;
+                border-top: 20px solid;
+                border-color: @darker-main-color;
+                border-left: 20px solid transparent;
+            }
+            .corner-header {
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-top: 250px solid;
+                border-color: @t-main-color-dark;
+                border-right: 550px solid transparent;
+                z-index: 0;
+            }
         }
-        .corner-left {
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -26px;
-            left: 0;
-            border-top: 20px solid;
-            border-color: @darker-main-color;
-            border-left: 20px solid transparent;
+
+        @media @md {
+            .navbar-default {
+                transform: scaleX(1.055);
+            }
+            .corner-right {
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -26px;
+                right: 0;
+                border-top: 20px solid;
+                border-color: @darker-main-color;
+                border-right: 20px solid transparent;
+            }
+            .corner-left {
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -26px;
+                left: 0;
+                border-top: 20px solid;
+                border-color: @darker-main-color;
+                border-left: 20px solid transparent;
+            }
+            .corner-header {
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-top: 250px solid;
+                border-color: @t-main-color-dark;
+                border-right: 800px solid transparent;
+                z-index: 0;
+            }
         }
-        .corner-header {
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-top: 250px solid;
-            border-color: @t-main-color-dark;
-            border-right: 800px solid transparent;
-            z-index: 0;
+
+        @media @lg {
+            .navbar-default {
+                transform: scaleX(1.04);
+            }
+            .corner-right {
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -26px;
+                right: 0;
+                border-top: 20px solid;
+                border-color: @darker-main-color;
+                border-right: 20px solid transparent;
+            }
+            .corner-left {
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -26px;
+                left: 0;
+                border-top: 20px solid;
+                border-color: @darker-main-color;
+                border-left: 20px solid transparent;
+            }
+            .corner-header {
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-top: 250px solid;
+                border-color: @t-main-color-dark;
+                border-right: 940px solid transparent;
+                z-index: 0;
+            }
         }
-    }
-    
-    @media @lg {
-        .navbar-default {
-            transform: scaleX(1.04);
+
+        .footer {
+            border-top: 4px solid @d-main-color;
+            font-family: 'Poiret One';
+            padding: 2% 0%;
+            background-color: @main-color;
+            color: @main-color-light;
         }
-        .corner-right {
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -26px;
-            right: 0;
-            border-top: 20px solid;
-            border-color: @darker-main-color;
-            border-right: 20px solid transparent;
+
+        a {
+            transition: @main-transition;
+            text-shadow: none;
+            color: @text-main-color-light;
+            &:hover,
+            &:active,
+            &:focus {
+                color: @darker-main-color;
+            }
         }
-        .corner-left {
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: -26px;
-            left: 0;
-            border-top: 20px solid;
-            border-color: @darker-main-color;
-            border-left: 20px solid transparent;
+
+        .text-primary {
+            color: @text-main-color-light;
         }
-        .corner-header {
+
+        .text-muted {
+            color: @d-text-main-color-light;
+            font-size: 15px;
+            text-align: right;
+            font-weight: bolder;
+        }
+
+        .corner-footer {
             width: 0;
             height: 0;
             position: absolute;
@@ -300,5 +342,4 @@ border-radius: 5px;
             border-right: 940px solid transparent;
             z-index: 0;
         }
-    }
-    /* END */
+        /* END */
