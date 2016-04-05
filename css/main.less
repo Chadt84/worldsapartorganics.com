@@ -405,26 +405,6 @@ body,
     text-shadow: 2px 1px @d-main-color;
 }
 
-.carousel-control.left {
-    background-image: -webkit-linear-gradient(left, @main-color 0, rgba(0, 0, 0, .0001) 100%);
-    background-image: -o-linear-gradient(left, @main-color 0, rgba(0, 0, 0, .0001) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, from @main-color), to(rgba(0, 0, 0, .0001));
-    background-image: linear-gradient(to right, @main-color 0, rgba(0, 0, 0, .0001) 100%);
-    //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-    background-repeat: repeat-x;
-}
-
-.carousel-control.right {
-    right: 0;
-    left: auto;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0, @main-color 100%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0, @main-color 100%);
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(@main-color));
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, @main-color 100%);
-    //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-    background-repeat: repeat-x;
-}
-
 .carousel-control .fa-chevron-left,
 .carousel-control .fa-chevron-right,
 .carousel-control .icon-next,
