@@ -1,3 +1,4 @@
+// Pinning the nav bar
 setTimeout(function () { // wait for document ready
     // init controller
     var controller = new ScrollMagic.Controller({});
@@ -51,3 +52,43 @@ setTimeout(function () { // wait for document ready
     //scene.addIndicators();
 }*/
 }, 500);
+
+//Scrolls to the selected menu item on the page
+/*$(function () {
+    $('a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 60
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});*/
+// This is a functions that scrolls to #{blah}link
+function goToByScroll(id) {
+    // Remove "link" from the ID
+    id = id.replace("link", "");
+    // Scroll
+    $('html,body').animate({
+            scrollTop: $("#" + id).offset().top - 60
+        }
+        , 'slow');
+}
+
+$("#navbar > div > ul > li > a").click(function (e) {
+    // Prevent a page reload when a link is pressed
+    e.preventDefault();
+    // Call the scroll function
+    goToByScroll(this.id);
+});
+$("#navbar > div > a").click(function (e) {
+    // Prevent a page reload when a link is pressed
+    e.preventDefault();
+    // Call the scroll function
+    goToByScroll(this.id);
+});
