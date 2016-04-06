@@ -49,9 +49,10 @@ body {
 
 .page {
     background-color: @main-color-light;
-    border: solid 4px @main-color;
-    border-radius: 3px;
+    //border: solid 4px @main-color;
+    //border-radius: 3px;
     padding: 0;
+    z-index: 1;
 }
 
 .lead {
@@ -179,6 +180,7 @@ body {
     padding: 2% 1%;
     background-color: @main-color;
     color: @main-color-light;
+    z-index: 1;
 }
 
 a {
@@ -203,17 +205,7 @@ a {
     font-weight: bolder;
 }
 
-.corner-footer {
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 250px solid;
-    border-color: @t-main-color-dark;
-    border-right: 940px solid transparent;
-    z-index: 0;
-}
+
 
 html,
 body,
@@ -445,6 +437,24 @@ body,
 }
 
 @media @sm {
+    .corner-footer-right {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    border-bottom: 46px solid;
+    border-color: @darker-main-color;
+    border-left: 80px solid transparent;
+    z-index: 0;
+}
+.corner-footer-left {
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    border-bottom: 46px solid;
+    border-color: @darker-main-color;
+    border-right: 80px solid transparent;
+    z-index: 0;
+}
     .navbar-default {
         transform: scaleX(1.05);
     }
@@ -482,6 +492,24 @@ body,
 }
 
 @media @md {
+    .corner-footer-right {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    border-bottom: 62px solid;
+    border-color: @darker-main-color;
+    border-left: 97px solid transparent;
+    z-index: 0;
+}
+.corner-footer-left {
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    border-bottom: 62px solid;
+    border-color: @darker-main-color;
+    border-right: 97px solid transparent;
+    z-index: 0;
+}
     .polaroid p {
     position: absolute;
     padding: 0% 50%;
@@ -527,6 +555,24 @@ body,
 }
 
 @media @lg {
+        .corner-footer-right {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    border-bottom: 101px solid;
+    border-color: @darker-main-color;
+    border-left: 209px solid transparent;
+    z-index: 0;
+}
+.corner-footer-left {
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    border-bottom: 101px solid;
+    border-color: @darker-main-color;
+    border-right: 209px solid transparent;
+    z-index: 0;
+}
     .carousel-indicators {
     position: absolute;
     bottom: 8%;
@@ -577,4 +623,5 @@ body,
         background-size: cover;
     }
 }
+
 /* END */
