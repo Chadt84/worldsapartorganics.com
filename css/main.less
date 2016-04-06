@@ -331,7 +331,7 @@ body {
 a {
     transition: @main-transition;
     text-shadow: none;
-    color: @text-main-color-light;
+    color: currentColor;
     &:hover,
     &:active,
     &:focus {
@@ -431,6 +431,15 @@ body,
 
 .navbar-header {
     z-index: 1;
+}
+
+#map {
+    color: @d-main-color;
+    padding: 0;
+}
+
+.fa-lg {
+    font-size: 70px;
 }
 
 
