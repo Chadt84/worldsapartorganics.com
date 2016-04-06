@@ -433,13 +433,34 @@ body,
     z-index: 1;
 }
 
-#map {
-    color: @d-main-color;
+.map {
+    color: @main-color;
     padding: 0;
 }
 
 .fa-lg {
     font-size: 70px;
+    padding: 0% 50%;
+    margin: 5% 0;
+}
+
+.fa-map-marker {
+    color: @main-color-light;
+}
+
+.btn-map {
+    font-family: 'Poiret One';
+    transition: @main-transition;
+    background: @main-color;
+    color: @main-color-light;
+    border-radius: 0;
+    font-size: x-large;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @d-main-color;
+        color: @darker-main-color;
+    }
 }
 
 
