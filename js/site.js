@@ -53,22 +53,6 @@ setTimeout(function () { // wait for document ready
 }*/
 }, 500);
 
-//Scrolls to the selected menu item on the page
-/*$(function () {
-    $('a[href*=#]:not([href=#])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top - 60
-                }, 1000);
-                return false;
-            }
-        }
-    });
-});*/
 // This is a functions that scrolls to #{blah}link
 function goToByScroll(id) {
     // Remove "link" from the ID
@@ -91,4 +75,16 @@ $("#navbar > div > a").click(function (e) {
     e.preventDefault();
     // Call the scroll function
     goToByScroll(this.id);
+});
+
+$('.btn-map').on('click', function () {
+    setTimeout(function () {
+        if ($('#map-frame').hasClass('in')) {
+            $('.btn-map-text').text('Hide ').append("<b>map</b>");
+            $('.arrow').toggleClass('arrow-active');
+        } else {
+            $('.btn-map-text').text('Expand ').append("<b>map</b>");
+            $('.arrow').toggleClass('arrow-active');
+        }
+    }, 400);
 });

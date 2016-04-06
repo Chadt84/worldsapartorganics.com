@@ -120,6 +120,8 @@ body {
     position: relative;
     z-index: 2;
     font-size: larger;
+    filter: blur(0);
+    -webkit-filter: blur(0);
 }
 
 .navbar-default .navbar-toggle {
@@ -164,6 +166,247 @@ body {
 
 .small {
     width: 100%;
+}
+
+.corner-header {
+    -webkit-filter: blur(25px);
+    filter: blur(0)
+}
+
+.footer {
+    border-top: 4px solid @d-main-color;
+    font-family: 'Poiret One';
+    padding: 2% 1%;
+    background-color: @main-color;
+    color: @main-color-light;
+}
+
+a {
+    transition: @main-transition;
+    text-shadow: none;
+    color: currentColor;
+    &:hover,
+    &:active,
+    &:focus {
+        color: @darker-main-color;
+    }
+}
+
+.text-primary {
+    color: @text-main-color-light;
+}
+
+.text-muted {
+    color: @d-text-main-color-light;
+    font-size: 15px;
+    text-align: right;
+    font-weight: bolder;
+}
+
+.corner-footer {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 250px solid;
+    border-color: @t-main-color-dark;
+    border-right: 940px solid transparent;
+    z-index: 0;
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+    height: 100%;
+}
+
+.gallery {
+    transition: @main-transition;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    vertical-align: middle;
+    margin-bottom: 1%;
+}
+
+.list-unstyled {
+    font-size: small;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 9.1%;
+    li {
+        background-color: @main-color;
+        border: 1px solid @main-color-light;
+        transition: @main-transition;
+        width: 10px;
+        height: 10px;
+        &.active {
+            background-color: @main-color-light;
+            border: 1px solid @main-color;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.carousel-caption {
+    font-family: 'Lobster';
+    font-size: x-large;
+    text-shadow: 2px 1px @d-main-color;
+}
+
+.carousel-control .fa-chevron-left,
+.carousel-control .fa-chevron-right,
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+    color: @main-color-light;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.carousel-control .fa-chevron-right,
+.carousel-control .icon-next {
+    transition: color 0.2s ease-in-out;
+    transition: text-shadow 0.2s ease-in-out;
+    right: 20%;
+    margin-right: -10px;
+    color: @d-main-color-light;
+    text-shadow: 2px 2px @main-color-dark;
+    &:hover,
+    &:active,
+    &:focus{
+        color: @darker-main-color-light;
+        text-shadow: 1px 1px @t-main-color-dark;
+    }
+}
+
+.carousel-control .fa-chevron-left,
+.carousel-control .icon-prev {
+    transition: color 0.2s ease-in-out;
+    transition: text-shadow 0.2s ease-in-out;
+    left: 20%;
+    margin-left: -10px;
+    color: @d-main-color-light;
+    text-shadow: 2px 2px @main-color-dark;
+    &:hover,
+    &:active,
+    &:focus{
+        color: @darker-main-color-light;
+        text-shadow: 1px 1px @t-main-color-dark;
+    }
+}
+
+.navbar-header {
+    z-index: 1;
+}
+
+.map {
+    color: @main-color;
+    padding: 0;
+}
+
+.fa-lg {
+    font-size: 70px;
+    padding: 0% 50%;
+    margin: 5% 0;
+}
+
+.fa-map-marker {
+    color: @main-color-light;
+}
+
+.btn-map {
+    font-family: 'Poiret One';
+    transition: @main-transition;
+    background: @main-color;
+    color: @main-color-light;
+    border-radius: 0;
+    font-size: x-large;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @d-main-color;
+        color: @darker-main-color;
+    }
+}
+
+.arrow {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0deg);
+    border: none;
+}
+
+.arrow-active {
+    transform: rotate(180deg);
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: height 0.35s ease 1s linear;
+    -moz-transition: height 0.35s ease 1s linear;
+    -o-transition: height 0.35s ease 1s linear;
+    -ms-transition: height 0.35s ease 1s linear;
+    transition: height 0.35s ease 1s linear;
+    -webkit-transition: height 0.35s ease-in-out;
+    transition: height 0.35s ease-in-out;
+}
+
+.animation(@animation) {
+    -webkit-animation: @animation;
+    animation: @animation;
+    -webkit-transform: translateZ(0); // +++++++++++++++++++++++++++++++++ share the GPU
+}
+
+.polaroid {
+    position: relative;
+    width: 100%;
+}
+
+.polaroid img {
+    border: 10px solid @main-color-light;
+    border-bottom: 55px solid @main-color-light;
+    -webkit-box-shadow: 3px 3px 3px #777;
+    -moz-box-shadow: 3px 3px 3px #777;
+    box-shadow: 3px 3px 3px #777;
+}
+
+.polaroid {
+    p {
+        position: absolute;
+        padding: 0% 46%;
+        width: 100%;
+        bottom: 4%;
+        font: 400 18px/1 'Kaushan Script', cursive;
+        color: @text-main-color-dark;
+    }
+}
+
+//@media not all, (-webkit-transform-3d)
+.carousel-inner>.item.active,
+.carousel-inner>.item.next.left,
+.carousel-inner>.item.prev.right {
+    padding: 5%;
+}
+.carousel-control.right{
+    background-image: none;
+    background-repeat: no-repeat;
+}
+.carousel-control.left{
+    background-image: none;
+    background-repeat: no-repeat;
 }
 
 @media @xs {
@@ -239,6 +482,14 @@ body {
 }
 
 @media @md {
+    .polaroid p {
+    position: absolute;
+    padding: 0% 50%;
+    width: 100%;
+    bottom: 6%;
+    font: 400 18px/1 'Kaushan Script', cursive;
+    color: #333;
+}
     .navbar-default {
         transform: scaleX(1.055);
     }
@@ -276,6 +527,18 @@ body {
 }
 
 @media @lg {
+    .carousel-indicators {
+    position: absolute;
+    bottom: 8%;
+}
+    .polaroid p {
+    position: absolute;
+    padding: 0% 50%;
+    width: 100%;
+    bottom: 6%;
+    font: 400 18px/1 'Kaushan Script', cursive;
+    color: #333;
+}
     .navbar-default {
         transform: scaleX(1.04);
     }
@@ -314,154 +577,4 @@ body {
         background-size: cover;
     }
 }
-
-.corner-header {
-    -webkit-filter: blur(25px);
-    filter: blur(0)
-}
-
-.footer {
-    border-top: 4px solid @d-main-color;
-    font-family: 'Poiret One';
-    padding: 2% 1%;
-    background-color: @main-color;
-    color: @main-color-light;
-}
-
-a {
-    transition: @main-transition;
-    text-shadow: none;
-    color: currentColor;
-    &:hover,
-    &:active,
-    &:focus {
-        color: @darker-main-color;
-    }
-}
-
-.text-primary {
-    color: @text-main-color-light;
-}
-
-.text-muted {
-    color: @d-text-main-color-light;
-    font-size: 15px;
-    text-align: right;
-    font-weight: bolder;
-}
-
-.corner-footer {
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 250px solid;
-    border-color: @t-main-color-dark;
-    border-right: 940px solid transparent;
-    z-index: 0;
-}
-
-html,
-body,
-.carousel,
-.carousel-inner,
-.carousel-inner .item {
-    height: 100%;
-}
-
-.gallery {
-    transition: @main-transition;
-    position: relative;
-    z-index: 0;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    vertical-align: middle;
-    margin-bottom: 1%;
-}
-
-.list-unstyled {
-    font-size: small;
-}
-
-.carousel-indicators li {
-    background-color: @main-color;
-    border: 1px solid @main-color-light;
-    transition: @main-transition;
-    width: 10px;
-    height: 10px;
-    &.active {
-        background-color: @main-color-light;
-        border: 1px solid @main-color;
-        width: 15px;
-        height: 15px;
-    }
-}
-
-.carousel-caption {
-    font-family: 'Lobster';
-    font-size: x-large;
-    text-shadow: 2px 1px @d-main-color;
-}
-
-.carousel-control .fa-chevron-left,
-.carousel-control .fa-chevron-right,
-.carousel-control .icon-next,
-.carousel-control .icon-prev {
-    color: @main-color-light;
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    margin-top: -10px;
-}
-
-.carousel-control .fa-chevron-right,
-.carousel-control .icon-next {
-    right: 50%;
-    margin-right: -10px;
-}
-
-.carousel-control .fa-chevron-left,
-.carousel-control .icon-prev {
-    left: 50%;
-    margin-left: -10px;
-}
-
-.navbar-header {
-    z-index: 1;
-}
-
-.map {
-    color: @main-color;
-    padding: 0;
-}
-
-.fa-lg {
-    font-size: 70px;
-    padding: 0% 50%;
-    margin: 5% 0;
-}
-
-.fa-map-marker {
-    color: @main-color-light;
-}
-
-.btn-map {
-    font-family: 'Poiret One';
-    transition: @main-transition;
-    background: @main-color;
-    color: @main-color-light;
-    border-radius: 0;
-    font-size: x-large;
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: @d-main-color;
-        color: @darker-main-color;
-    }
-}
-
-
 /* END */
