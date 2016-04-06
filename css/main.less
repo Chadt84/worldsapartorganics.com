@@ -67,20 +67,24 @@ body {
 
 .page-header {
     background-color: @main-color-light;
-    text-shadow: 1px 1px @d-main-color;
     margin-top: 0px;
     margin-bottom: 0px;
     border-bottom: none;
-    color: @main-color;
+    color: @main-color-light;
     font-family: 'Poiret One';
     background-color: @main-color-light;
     background-image: url(../img/gallery/1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    h2 {
-        text-shadow: 0.2px 0.2px @main-color;
+    b{
         color: @main-color;
+    }
+    h2 {
+        b{
+            color: @main-color-light;
+        }
+        color: @main-color-light;
         position: relative;
         z-index: 1;
         font-weight: bolder;
