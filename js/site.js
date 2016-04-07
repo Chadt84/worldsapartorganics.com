@@ -34,7 +34,7 @@ $('.btn-map').on('click', function () {
     }, 400);
 });
 
-
+//Scrol to section navbar
 $(function () {
     $('a[href*=#]:not([href=#])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
@@ -49,4 +49,13 @@ $(function () {
             }
         }
     });
+});
+//Close navbar on scroll
+$('ul > li > a').on('click',function(){
+    console.log('navbar click');
+    if($('#navbar-collapse-btn').css('display') == 'none'){
+    }
+    else{
+        $('#navbar-collapse-btn').click();
+    }
 });
