@@ -1,7 +1,8 @@
 // Pinning the nav bar
 setTimeout(function () { // wait for document ready
     // init controller
-    var controller = new ScrollMagic.Controller({});
+    var controller = new ScrollMagic.Controller({
+    });
     // init scene
     var scene = new ScrollMagic.Scene({
             triggerElement: "#navbar"
@@ -10,7 +11,7 @@ setTimeout(function () { // wait for document ready
         })
         .setPin("#navbar")
         .addTo(controller)
-        .addIndicators()
+        //.addIndicators()
 
     // detect if mobile browser. regex -> http://detectmobilebrowsers.com
     var isMobile = (function (a) {
@@ -20,7 +21,7 @@ setTimeout(function () { // wait for document ready
     // we'd only like to use iScroll for mobile...
     if (isMobile) {
         // configure iScroll
-        var myScroll = new IScroll('.page', {
+        var myScroll = new IScroll('#example-wrapper', {
             // don't scroll horizontal
             scrollX: false, // but do scroll vertical
             scrollY: true, // show scrollbars
