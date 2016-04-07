@@ -406,6 +406,9 @@ body,
 }
 
 @media @xs {
+    .page{
+        border: solid 4px @main-color;
+    }
     .navbar-nav {
         li {
             background-color: @main-color;
@@ -670,9 +673,6 @@ form{
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    &::placeholder{
-        color: red;
-    }
 }
 :placeholder-shown {
     transition: @main-transition;
