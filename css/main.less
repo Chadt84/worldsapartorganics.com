@@ -630,5 +630,57 @@ body,
 #about{
     padding: 5%;
 }
+.btn-primary{
+    transition: @main-transition;
+    border-radius: 0;
+    font-family: 'Poiret One';
+    background-image: none;
+    background-color: @main-color;
+    border: none;
+    font-size:x-large;
+    &:hover,
+    &:active,
+    &:focus{
+        background-color: @d-main-color;
+        color: @darker-main-color;
+    }
+}
+form{
+    h3{
+        color: @main-color;
+        font-family: 'Poiret one';
+        font-size: xx-large;
+    }
 
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: @text-main-color-dark;
+    background-color: @main-color-light;
+    background-image: none;
+    border: 1px solid @t-main-color;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    &::placeholder{
+        color: red;
+    }
+}
+:placeholder-shown {
+    transition: @main-transition;
+    &:active,
+    &:focus{
+        border-color: @main-color;
+        box-shadow: none;
+    }
+
+}
 /* END */
