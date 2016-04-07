@@ -42,17 +42,19 @@ h6 small {
 
 body {
     background: url(../img/bg1.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: @d-main-color;
 }
 
 .page {
     background-color: @main-color-light;
-    //border: solid 4px @main-color;
-    //border-radius: 3px;
     padding: 0;
     z-index: 1;
+}
+.square{
+    height: 100px;
+    background-color: rebeccapurple;
 }
 
 .lead {
@@ -125,8 +127,6 @@ body {
     position: relative;
     z-index: 2;
     font-size: larger;
-    filter: blur(0);
-    -webkit-filter: blur(0);
 }
 
 .navbar-default .navbar-toggle {
@@ -626,6 +626,9 @@ body,
     body {
         background-size: cover;
     }
+}
+#about{
+    padding: 5%;
 }
 
 /* END */
