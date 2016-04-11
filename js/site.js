@@ -50,6 +50,7 @@ $(function () {
         }
     });
 });
+
 //Close navbar on scroll
 $('ul > li > a').on('click',function(){
     console.log('navbar click');
@@ -60,6 +61,7 @@ $('ul > li > a').on('click',function(){
     }
 });
 
+//Gallery
 $(document).ready(function() {
 	$('.zoom-gallery').magnificPopup({
 		delegate: 'a',
