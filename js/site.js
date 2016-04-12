@@ -12,6 +12,16 @@ setTimeout(function () { // wait for document ready
         .setPin("#navbar")
         .addTo(controller)
         //.addIndicators()
+    if($(document).width() < 768){
+        var scene1 = new ScrollMagic.Scene({
+            triggerElement: "#gallery-nav"
+            , duration: 0
+            , triggerHook: 0.101
+        })
+        .setPin("#gallery-nav")
+        .addTo(controller)
+        .addIndicators()
+        }
 }, 500);
 
 var currentPage = window.location.pathname;
