@@ -15,20 +15,28 @@ setTimeout(function () { // wait for document ready
 
         var galleryHeight = $('#gallery').height();
         var scene1 = new ScrollMagic.Scene({
-                triggerElement: "#gallery-nav"
-                , duration: galleryHeight - 124
-                , triggerHook: 0.09
+                triggerElement: ".gallery-up"
+                , duration: galleryHeight
+                , triggerHook: 0.6
             })
-            .setPin("#gallery-nav")
+            .setPin(".gallery-up")
             //.addIndicators()
+            .on("progress", function (e) {
+                if (e.progress.toFixed(3) > 0.172){
+                    $(".gallery-up").css('opacity',e.progress.toFixed(2) * 2);
+                }
+                else if(e.progress.toFixed(3) <=     0.172){
+                    $(".gallery-up").css('opacity','0');
+                }
+            });
         scene1.addTo(controller);
         $(document).on('click', function () {
-        setTimeout(function () {
-            galleryHeight = $("#gallery").height();
-            scene1.duration(galleryHeight - 124);
-            console.log(galleryHeight);
-        }, 600)
-    });
+            setTimeout(function () {
+                galleryHeight = $("#gallery").height();
+                scene1.duration(galleryHeight);
+                console.log(galleryHeight);
+            }, 600)
+        });
     }
 
 }, 500);

@@ -127,7 +127,7 @@ body {
     border-top-right-radius: 10px;
     border-bottom: solid 7px @d-main-color;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     font-size: larger;
 }
 
@@ -184,6 +184,7 @@ body {
     border-top: 4px solid @d-main-color;
     font-family: 'Poiret One';
     padding: 2% 1%;
+    padding-bottom: 0;
     background-color: @main-color;
     color: @text-main-color-light;
     z-index: 1;
@@ -553,7 +554,6 @@ form {
     .nav-pills {
         z-index: 1;
         background-color: @main-color;
-        position: absolute;
         li {
             a {
                 color: @text-main-color-light;
@@ -760,4 +760,21 @@ form {
     body {
         background-size: cover;
     }
+}
+.creator-logo{
+    width: 10%;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+.gallery-up{
+    transition: none;
+    position: absolute;
+    display: none;
+    z-index: 2;
+    opacity: 0;
+    color: @darker-main-color;
+    text-shadow: 2px 2px @main-color;
+}
+:focus {
+    outline: -webkit-focus-ring-color none;
 }
