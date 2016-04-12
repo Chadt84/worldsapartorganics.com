@@ -88,3 +88,19 @@ $(document).ready(function() {
 
 	});
 });
+
+// Gallery tabs
+$( "[id^='gallery-tab-']" ).on('click',function(){
+    if ($(this).hasClass('active')){
+    }
+    else{
+        var last = $( "[id^='gallery-tab-'].active" );
+        var lastIndex = $( "[id^='gallery-tab-'].active" ).index() + 1;
+        var index = $(this).index() + 1;
+        console.log(last);
+        $( "#gallery > #gallery" + index).toggleClass('gallery-active gallery-inactive');
+        $( "#gallery > #gallery" + lastIndex).toggleClass('gallery-active gallery-inactive');
+        last.toggleClass('active');
+        $(this).toggleClass('active');
+    }
+});
