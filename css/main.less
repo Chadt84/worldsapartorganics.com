@@ -553,13 +553,13 @@ form {
     .nav-pills {
         z-index: 1;
         background-color: @main-color;
+        position: absolute;
         li {
             a {
                 color: @text-main-color-light;
             }
         }
         padding: 0;
-        //border: solid 1px @d-main-color;
     }
     #gallery {
         padding: 0;
@@ -624,6 +624,9 @@ form {
         border-right: 550px solid transparent;
         z-index: 0;
     }
+    .nav-pills{
+    position: relative;
+}
 }
 
 @media @md {
