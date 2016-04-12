@@ -16,7 +16,7 @@ setTimeout(function () { // wait for document ready
         var scene1 = new ScrollMagic.Scene({
             triggerElement: "#gallery-nav"
             , duration: 0
-            , triggerHook: 0.101
+            , triggerHook: 0.09
         })
         .setPin("#gallery-nav")
         .addTo(controller)
