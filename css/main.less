@@ -107,7 +107,6 @@ body {
     li {
         transition: @main-transition;
         background-color: @main-color;
-        border: solid 1px @main-color;
         &:hover,
         &:active,
         &:focus {
@@ -218,6 +217,7 @@ body,
 .carousel-inner,
 .carousel-inner .item {
     height: 100%;
+    z-index: 0;
 }
 
 .list-unstyled {
@@ -333,7 +333,7 @@ body,
 }
 
 .arrow-active {
-    transform: rotate(180deg);
+    transform: rotateX(180deg);
 }
 
 .collapsing {
@@ -504,10 +504,8 @@ form {
 .zoom-gallery {
     z-index: 0;
 }
+
 @media @xs {
-    .page {
-        border: solid 4px @main-color;
-    }
     .navbar-nav {
         li {
             background-color: @main-color;
@@ -564,11 +562,13 @@ form {
     #gallery {
         padding: 0;
     }
-    .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-    color: @text-main-color-light;
-    border-radius: 2px;
-    background-color: @d-main-color;
-}
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:focus,
+    .nav-pills > li.active > a:hover {
+        color: @text-main-color-light;
+        border-radius: 2px;
+        background-color: @d-main-color;
+    }
 }
 
 @media @sm {
@@ -624,9 +624,9 @@ form {
         border-right: 550px solid transparent;
         z-index: 0;
     }
-    .nav-pills{
-    position: relative;
-}
+    .nav-pills {
+        position: relative;
+    }
 }
 
 @media @md {
@@ -761,12 +761,14 @@ form {
         background-size: cover;
     }
 }
-.creator-logo{
+
+.creator-logo {
     width: 10%;
     margin-left: 5%;
     margin-top: 1%;
 }
-.gallery-up{
+
+.gallery-up {
     transition: none;
     position: absolute;
     display: none;
@@ -775,9 +777,76 @@ form {
     color: @darker-main-color;
     text-shadow: 2px 2px @main-color;
 }
+
 :focus {
     outline: -webkit-focus-ring-color none;
 }
-.brand-logo{
+
+.brand-logo {
     width: 30px;
+    bottom: 6px;
+    position: relative;
+}
+
+.carousel-inner > .item.active,
+.carousel-inner > .item.next.left,
+.carousel-inner > .item.prev.right {
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: @text-main-color-light;
+    }
+}
+
+.navbar-default .navbar-nav>.open>a {
+    transition: @main-transition;
+    color: @text-main-color-light;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    &:focus,
+    &:hover,
+    &:active {
+        color: @darker-main-color;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+    }
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu>li>a {
+    color: @text-main-color-light;
+    transition: @main-transition;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: @d-main-color;
+        background-image: none;
+        color: @darker-main-color;
+        box-shadow: none;
+    }
+}
+
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+        color: @darker-main-color;
+        background-color: transparent;
+    }
+}
+#navbar-collapse-arrow{
+    transition: @main-transition;
 }
