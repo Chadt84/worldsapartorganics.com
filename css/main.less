@@ -395,7 +395,7 @@ body,
     padding: 0 0 5% 0;
     position: relative;
     top: -20px;
-    p{
+    p {
         padding: 5%;
     }
 }
@@ -633,9 +633,17 @@ form {
     .nav-pills {
         position: relative;
     }
+    .carousel{
+        padding-right: 5px;
+        border-right: solid 1px @d-main-color-light;
+    }
 }
 
 @media @md {
+    .carousel {
+        padding-right: 5px;
+        border-right: solid 1px @d-main-color-light;
+    }
     .corner-footer-right {
         position: absolute;
         bottom: -30%;
@@ -699,6 +707,10 @@ form {
 }
 
 @media @lg {
+    .carousel{
+        padding-right: 10px;
+        border-right: solid 1px @d-main-color-light;
+    }
     .corner-footer-right {
         position: absolute;
         bottom: -30%;
@@ -857,16 +869,18 @@ form {
 #navbar-collapse-arrow {
     transition: @main-transition;
 }
-.btn-active{
+
+.btn-active {
     background-color: @d-main-color;
     transition: @main-transition !important;
     &:hover,
     &:active,
-    &:focus{
+    &:focus {
         background-color: @d-main-color !important;
         color: @darker-main-color !important;
     }
 }
+
 .parallax-window {
     min-height: 500px;
     background: transparent;
