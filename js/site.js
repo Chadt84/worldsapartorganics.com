@@ -122,4 +122,7 @@ $("[id^='gallery-tab-']").on('click', function () {
         $(this).toggleClass('active');
     }
 });
-$('.parallax-window').parallax();
+setTimeout(function(){
+    $('.parallax-window').parallax();
+}, 100);
+
