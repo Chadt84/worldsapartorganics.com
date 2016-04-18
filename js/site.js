@@ -1,5 +1,6 @@
 // Pinning the nav bar
 setTimeout(function () { // wait for document ready
+    $('.parallax-window').parallax();
     // init controller
     var controller = new ScrollMagic.Controller({});
     // init scene

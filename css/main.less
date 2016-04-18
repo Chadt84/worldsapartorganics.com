@@ -857,3 +857,17 @@ form {
 #navbar-collapse-arrow {
     transition: @main-transition;
 }
+.btn-active{
+    background-color: @d-main-color;
+    transition: @main-transition !important;
+    &:hover,
+    &:active,
+    &:focus{
+        background-color: @d-main-color !important;
+        color: @darker-main-color !important;
+    }
+}
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
+}
