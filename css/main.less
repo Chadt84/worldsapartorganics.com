@@ -511,7 +511,123 @@ form {
     z-index: 0;
 }
 
+.parallax-window {
+    transition: @main-transition;
+    min-height: 500px;
+    max-height: 500px;
+    background: transparent;
+    position: relative;
+    top: -20px;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @t-main-color-dark;
+        .text-activities {
+            background-color: @main-color;
+        }
+    }
+    &:nth-child(4) {
+        .text-activities {
+            transition: @main-transition;
+            top: 40px;
+            border-radius: 5px 0 0 5px;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @t-main-color-dark;
+            .text-activities {
+                background-color: @main-color;
+            }
+        }
+    }
+    &:nth-child(5) {
+        .text-activities {
+            top: 40px;
+            border-radius: 5px 0 0 5px;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @t-main-color-dark;
+            .text-activities {
+                background-color: @main-color;
+            }
+        }
+    }
+}
+
+.text-activities {
+    transition: @main-transition;
+    padding: 20px;
+    color: @text-main-color-light;
+    position: relative;
+    top: 20px;
+    background-color: fadeout(@t-main-color, 10%);
+    border-radius: 0 5px 5px 0;
+    max-height: 460px;
+}
+
+.title-activities {
+    text-align: left;
+    margin: 20px;
+    margin-top: 0;
+    margin-left: 0
+}
+
 @media @xs {
+    .parallax-window {
+        transition: @main-transition;
+        min-height: 500px;
+        max-height: 500px;
+        background: transparent;
+        position: relative;
+        top: -20px;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @t-main-color-dark;
+            .text-activities {
+                background-color: @main-color;
+                width: 99%;
+            }
+        }
+        &:nth-child(4) {
+            .text-activities {
+                transition: @main-transition;
+                top: 40px;
+                border-radius: 5px 0 0 5px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @t-main-color-dark;
+                .text-activities {
+                    background-color: @main-color;
+                    width: 99%;
+                    margin-left: 1%;
+                    position: relative;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .text-activities {
+                top: 40px;
+                border-radius: 5px 0 0 5px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @t-main-color-dark;
+                .text-activities {
+                    background-color: @main-color;
+                    width: 99%;
+                    margin-left: 1%;
+                    position: relative;
+                }
+            }
+        }
+    }
     .navbar-nav {
         li {
             background-color: @main-color;
@@ -578,6 +694,58 @@ form {
 }
 
 @media @sm {
+    .parallax-window {
+        transition: @main-transition;
+        min-height: 500px;
+        max-height: 500px;
+        background: transparent;
+        position: relative;
+        top: -20px;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: @t-main-color-dark;
+            .text-activities {
+                background-color: @main-color;
+                width: 99%;
+            }
+        }
+        &:nth-child(4) {
+            .text-activities {
+                transition: @main-transition;
+                top: 40px;
+                border-radius: 5px 0 0 5px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @t-main-color-dark;
+                .text-activities {
+                    background-color: @main-color;
+                    width: 99%;
+                    margin-left: 1%;
+                    position: relative;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .text-activities {
+                top: 40px;
+                border-radius: 5px 0 0 5px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: @t-main-color-dark;
+                .text-activities {
+                    background-color: @main-color;
+                    width: 99%;
+                    margin-left: 1%;
+                    position: relative;
+                }
+            }
+        }
+    }
     .corner-footer-right {
         position: absolute;
         bottom: -30%;
@@ -633,7 +801,7 @@ form {
     .nav-pills {
         position: relative;
     }
-    .carousel{
+    .carousel {
         padding-right: 5px;
         border-right: solid 1px @d-main-color-light;
     }
@@ -707,7 +875,7 @@ form {
 }
 
 @media @lg {
-    .carousel{
+    .carousel {
         padding-right: 10px;
         border-right: solid 1px @d-main-color-light;
     }
@@ -879,11 +1047,4 @@ form {
         background-color: @d-main-color !important;
         color: @darker-main-color !important;
     }
-}
-
-.parallax-window {
-    min-height: 500px;
-    background: transparent;
-    position: relative;
-    top: -20px;
 }
