@@ -109,7 +109,9 @@ $(document).ready(function () {
 
     });
     if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
-        alert();
+        $('.parallax-window').on('click',function(){
+            $(this > 'div').css('background-color','red');
+        });
     }
 });
 
