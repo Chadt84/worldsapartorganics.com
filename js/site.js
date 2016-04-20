@@ -122,7 +122,7 @@ $("[id^='gallery-tab-']").on('click', function () {
         $(this).toggleClass('active');
     }
 });
-if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i) {
+if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
     alert('true');
     $('.parallax-window').on('click',function(){
         if(this.children('.text-activities-left')){
