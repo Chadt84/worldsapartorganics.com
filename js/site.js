@@ -124,6 +124,7 @@ $("[id^='gallery-tab-']").on('click', function () {
 });
 var is_uiwebview = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
 if (is_uiwebview) {
+    alert(true);
     $('.parallax-window').on('click',function(){
         if(this.children('.text-activities-left')){
             this.css({
