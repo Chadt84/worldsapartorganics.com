@@ -84,9 +84,6 @@ $('.dropdown-menu > li > a').on('click', function () {
 
 //Gallery
 $(document).ready(function () {
-    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
-        alert();
-    };
     $('.zoom-gallery').magnificPopup({
         delegate: 'a'
         , type: 'image'
@@ -111,6 +108,9 @@ $(document).ready(function () {
         }
 
     });
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
+        alert();
+    }
 });
 
 // Gallery tabs
