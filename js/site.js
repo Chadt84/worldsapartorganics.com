@@ -76,8 +76,8 @@ $(function () {
 
 //Close navbar on scroll
 $('.dropdown-menu > li > a').on('click', function () {
-        if ($('#navbar-collapse-btn').css('display') == 'none') {} else {
-            $('#navbar-collapse-btn').click();
+    if ($('#navbar-collapse-btn').css('display') == 'none') {} else {
+        $('#navbar-collapse-btn').click();
     }
 
 });
@@ -122,19 +122,12 @@ $("[id^='gallery-tab-']").on('click', function () {
         $(this).toggleClass('active');
     }
 });
-if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
-    alert('true');
-    $('.parallax-window').on('click',function(){
-        if(this.children('.text-activities-left')){
-            this.css({
-                width: 99%,
+$(document).ready(function () {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
+        alert();
+    };
+});
 
-            });
-        }
-    });
-}
-
-setTimeout(function(){
+setTimeout(function () {
     $('.parallax-window').parallax();
 }, 100);
-
