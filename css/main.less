@@ -524,12 +524,12 @@ form {
     &:active,
     &:focus {
         background-color: @t-main-color-dark;
-        .text-activities {
+        .text-activities-left {
             background-color: @main-color;
         }
     }
     &:nth-child(4) {
-        .text-activities {
+        .text-activities-right {
             transition: @main-transition;
             top: 40px;
             border-radius: 5px 0 0 5px;
@@ -538,13 +538,13 @@ form {
         &:active,
         &:focus {
             background-color: @t-main-color-dark;
-            .text-activities {
+            .text-activities-right {
                 background-color: @main-color;
             }
         }
     }
     &:nth-child(5) {
-        .text-activities {
+        .text-activities-right {
             top: 40px;
             border-radius: 5px 0 0 5px;
         }
@@ -552,14 +552,15 @@ form {
         &:active,
         &:focus {
             background-color: @t-main-color-dark;
-            .text-activities {
+            .text-activities-right {
                 background-color: @main-color;
             }
         }
     }
 }
 
-.text-activities {
+.text-activities-left,
+.text-activities-right{
     transition: @main-transition;
     padding: 20px;
     color: @text-main-color-light;
@@ -653,13 +654,13 @@ hr{
         &:active,
         &:focus {
             background-color: @t-main-color-dark;
-            .text-activities {
+            .text-activities-left {
                 background-color: @main-color;
                 width: 99%;
             }
         }
         &:nth-child(4) {
-            .text-activities {
+            .text-activities-right {
                 transition: @main-transition;
                 top: 40px;
                 border-radius: 5px 0 0 5px;
@@ -668,7 +669,7 @@ hr{
             &:active,
             &:focus {
                 background-color: @t-main-color-dark;
-                .text-activities {
+                .text-activities-right {
                     background-color: @main-color;
                     width: 99%;
                     margin-left: 1%;
@@ -677,7 +678,7 @@ hr{
             }
         }
         &:nth-child(5) {
-            .text-activities {
+            .text-activities-right {
                 top: 40px;
                 border-radius: 5px 0 0 5px;
             }
@@ -685,7 +686,7 @@ hr{
             &:active,
             &:focus {
                 background-color: @t-main-color-dark;
-                .text-activities {
+                .text-activities-right {
                     background-color: @main-color;
                     width: 99%;
                     margin-left: 1%;
@@ -771,13 +772,13 @@ hr{
         &:active,
         &:focus {
             background-color: @t-main-color-dark;
-            .text-activities {
+            .text-activities-left {
                 background-color: @main-color;
                 width: 99%;
             }
         }
         &:nth-child(4) {
-            .text-activities {
+            .text-activities-right {
                 transition: @main-transition;
                 top: 40px;
                 border-radius: 5px 0 0 5px;
@@ -786,7 +787,7 @@ hr{
             &:active,
             &:focus {
                 background-color: @t-main-color-dark;
-                .text-activities {
+                .text-activities-right {
                     background-color: @main-color;
                     width: 99%;
                     margin-left: 1%;
@@ -795,7 +796,7 @@ hr{
             }
         }
         &:nth-child(5) {
-            .text-activities {
+            .text-activities-right {
                 top: 40px;
                 border-radius: 5px 0 0 5px;
             }
@@ -803,7 +804,7 @@ hr{
             &:active,
             &:focus {
                 background-color: @t-main-color-dark;
-                .text-activities {
+                .text-activities-right {
                     background-color: @main-color;
                     width: 99%;
                     margin-left: 1%;

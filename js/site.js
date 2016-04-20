@@ -122,6 +122,17 @@ $("[id^='gallery-tab-']").on('click', function () {
         $(this).toggleClass('active');
     }
 });
+var is_uiwebview = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
+if (is_uiwebview) {
+    $('.parallax-window').on('click',function(){
+        if(this.children('.text-activities-left')){
+            this.css({
+                width: 99%;
+            })
+        }
+    });
+}
+
 setTimeout(function(){
     $('.parallax-window').parallax();
 }, 100);
