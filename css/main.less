@@ -187,6 +187,8 @@ body {
     background-color: @main-color;
     color: @text-main-color-light;
     z-index: 1;
+    position: relative;
+    top: -1px;
 }
 
 a {
@@ -566,13 +568,67 @@ form {
     background-color: fadeout(@t-main-color, 10%);
     border-radius: 0 5px 5px 0;
     max-height: 460px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 100;
 }
 
 .title-activities {
     text-align: left;
     margin: 20px;
     margin-top: 0;
-    margin-left: 0
+    margin-left: 0;
+    font-family: 'Poiret One';
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.cabin-text {
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.cabin-title {
+    padding: 0px 40px;
+    font-family: 'Lobster';
+    font-family: 'Poiret One';
+    color: @main-color;
+    font-size: xx-large;
+}
+
+.cabin-pricing {
+    background-color: @main-color;
+    color: @text-main-color-light;
+    font-family: 'Poiret One';
+    font-size: x-large;
+    padding: 0;
+}
+
+.cabin-price {
+    padding-top: 10px;
+    min-height: 110px;
+}
+
+.cabin-button {
+    border-left: solid 2px @t-main-color-light;
+    padding: 30px;
+    min-height: 110px;
+    transition: @main-transition;
+    &:hover,
+    &:focus,
+    &:active {
+        border-left-color: @darker-main-color;
+        background-color: @d-main-color;
+        color: @darker-main-color;
+    }
+}
+hr{
+    margin-top: 0px;
+    margin-bottom: 0;
+    border: 0;
+    width: 80%;
+    border-top: 1px solid #eee;
+    position: relative;
+    left: -3%;
 }
 
 @media @xs {
@@ -803,14 +859,14 @@ form {
     }
     .carousel {
         padding-right: 5px;
-        border-right: solid 1px @d-main-color-light;
+        border-right: solid 1px #eee;
     }
 }
 
 @media @md {
     .carousel {
         padding-right: 5px;
-        border-right: solid 1px @d-main-color-light;
+        border-right: solid 1px #eee;
     }
     .corner-footer-right {
         position: absolute;
@@ -877,7 +933,7 @@ form {
 @media @lg {
     .carousel {
         padding-right: 10px;
-        border-right: solid 1px @d-main-color-light;
+        border-right: solid 1px #eee;
     }
     .corner-footer-right {
         position: absolute;
