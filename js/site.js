@@ -84,6 +84,9 @@ $('.dropdown-menu > li > a').on('click', function () {
 
 //Gallery
 $(document).ready(function () {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
+        alert();
+    };
     $('.zoom-gallery').magnificPopup({
         delegate: 'a'
         , type: 'image'
@@ -122,11 +125,7 @@ $("[id^='gallery-tab-']").on('click', function () {
         $(this).toggleClass('active');
     }
 });
-$(document).ready(function () {
-    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
-        alert();
-    };
-});
+
 
 setTimeout(function () {
     $('.parallax-window').parallax();
