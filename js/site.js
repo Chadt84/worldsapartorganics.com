@@ -110,6 +110,7 @@ $(document).ready(function () {
     });
     if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) {
         $('.parallax-window').on('click',function(){
+            alert('click');
             if ($(this).children('div').hasClass('text-activities-left')){
                 this.css('color','blue');
             }
