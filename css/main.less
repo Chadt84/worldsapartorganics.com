@@ -305,51 +305,53 @@ body {
                 transform: scaleX(1.04);
             }
         }
-        #about {
-            .carousel {
-                .carousel-indicators {
-                    position: absolute;
-                    bottom: 9.1%;
-                    li {
-                        background-color: @main-color;
-                        border: 1px solid @main-color-light;
-                        transition: @main-transition;
-                        width: 10px;
-                        height: 10px;
-                        &.active {
-                            background-color: @main-color-light;
-                            border: 1px solid @main-color;
-                            width: 15px;
-                            height: 15px;
-                        }
+        .carousel {
+            z-index: 1;
+            padding: 0;
+            .carousel-indicators {
+                position: absolute;
+                bottom: 9.1%;
+                li {
+                    background-color: @main-color;
+                    border: 1px solid @main-color-light;
+                    transition: @main-transition;
+                    width: 10px;
+                    height: 10px;
+                    &.active {
+                        background-color: @main-color-light;
+                        border: 1px solid @main-color;
+                        width: 15px;
+                        height: 15px;
                     }
-                    @media @lg {
-                        position: absolute;
-                        bottom: 8%;
-                    }
-                }
-                .carousel-inner {
-                    item {
-                        height: 100%;
-                        padding: 0;
-                        z-index: 0;
-                        padding: 5%;
-                    }
-                }
-                @media @sm {
-                    padding-right: 5px;
-                    border-right: solid 1px #eee;
-                }
-                @media @md {
-                    padding-right: 5px;
-                    border-right: solid 1px #eee;
                 }
                 @media @lg {
-                    padding-right: 10px;
-                    border-right: solid 1px #eee;
+                    position: absolute;
+                    bottom: 8%;
                 }
             }
-            padding: 0 0 5% 0;
+            .carousel-inner {
+                item {
+                    height: 100%;
+                    padding: 0;
+                    z-index: 0;
+                    padding: 5%;
+                }
+            }
+            @media @sm {
+                padding-right: 5px;
+                border-right: solid 1px #eee;
+            }
+            @media @md {
+                padding-right: 5px;
+                border-right: solid 1px #eee;
+            }
+            @media @lg {
+                padding-right: 10px;
+                border-right: solid 1px #eee;
+            }
+        }
+        #about {
+            padding: 0;
             position: relative;
             top: -20px;
             p {
@@ -481,7 +483,7 @@ body {
         }
         .cabin-text {
             padding: 50px;
-            padding-top: 10px;
+            padding-top: 1 0px;
             @media @xs {
                 padding: 0;
                 margin-top: 10px;
@@ -939,7 +941,6 @@ hr {
 :focus {
     outline: -webkit-focus-ring-color none;
 }
-
 
 .btn-active {
     background-color: @d-main-color;
