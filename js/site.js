@@ -84,7 +84,6 @@ $('.dropdown-menu > li > a').on('click', function () {
 
 //Gallery
 $(document).ready(function () {
-    if (window.location.pathname == "/index.html") {
         $('.zoom-gallery').magnificPopup({
             delegate: 'a'
             , type: 'image'
@@ -109,7 +108,6 @@ $(document).ready(function () {
             }
 
         });
-    }
 
 });
 
