@@ -510,18 +510,17 @@ body {
             padding: 0;
             .cabin-price {
                 padding-top: 10px;
-                min-height: 110px;
+                min-height: 166px;
+                border-right: solid 1px @main-color-light;
             }
             a {
                 .cabin-button {
-                    border-left: solid 2px @t-main-color-light;
                     padding: 30px;
-                    min-height: 110px;
+                    min-height: 166px;
                     transition: @main-transition;
                     &:hover,
                     &:focus,
                     &:active {
-                        border-left-color: @darker-main-color;
                         background-color: @d-main-color;
                         color: @darker-main-color;
                     }
@@ -832,6 +831,19 @@ body {
     }
     @media (min-width: 2397px) {
         background-size: cover;
+    }
+}
+
+@media (min-width: 979px) {
+    .dropdown {
+        ul.dropdown-meniu{
+            transition: @main-transition;
+        }
+        &:hover {
+            ul.dropdown-menu {
+                display: block;
+            }
+        }
     }
 }
 
