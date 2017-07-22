@@ -1,0 +1,57 @@
+/*--------------DEFAULT-----------------------------------------------
+
+main-color                                   #33b7b7
+main-color-light                             #ffffff
+main-color-dark                              #222
+text-main-color-light                        #ffffff
+text-main-color-dark                         #333
+
+----------------------------------------------------------------------------*/
+
+
+/* Colors*/
+
+
+/*Main colors*/
+
+@main-color:  #33b7b7;
+@t-main-color : fadeout(@main-color, 40%);
+@d-main-color : darken(@main-color, 10%);
+@darker-main-color : darken(@main-color, 20%);
+
+/* Light main colors */
+
+@main-color-light : #ffffff;
+@t-main-color-light : fadeout(@main-color-light, 40%);
+@d-main-color-light: darken(@main-color-light, 20%);
+@darker-main-color-light : darken(@main-color-light, 20%);
+
+/* Dark main colors */
+
+@main-color-dark: #222;
+@t-main-color-dark: fadeout(@main-color-dark, 40%);
+@d-main-color-dark: darken(@main-color-dark, 20%);
+@darker-main-color-dark : darken(@main-color-dark, 20%);
+
+/*Main text colors */
+
+@text-main-color-light: #ffffff;
+@t-text-main-color-light: lighten(fadeout(@text-main-color-dark, 10%), 30%);
+@d-text-main-color-light: darken(@text-main-color-light, 20%);
+@darker-text-main-color-light: darken(@text-main-color-light, 20%);
+@text-main-color-dark: #333;
+@t-text-main-color-dark: lighten(fadeout(@text-main-color-dark, 10%), 30%);
+@d-text-main-color-dark: darken(@text-main-color-dark, 20%);
+@darker-text-main-color-dark: darken(@text-main-color-dark, 20%);
+
+/* Transitions */
+
+@main-transition: all 0.3s ease-in-out;
+@main-transition-slow: all 0.5s ease-in-out;
+
+/* Media Queries*/
+
+@xs: ~"(max-width: 767px)";
+@sm: ~"(min-width: 768px) and (max-width: 991px)";
+@md: ~"(min-width: 992px) and (max-width: 1199px)";
+@lg: ~"(min-width: 1200px)";
