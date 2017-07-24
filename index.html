@@ -38,10 +38,12 @@
     <div class="page col-xs-12 col-sm-10 col-sm-offset-1">
         <header id="header" class="container-fluid page-header">
             <h1>Worlds <b>apart</b> organics</h1>
-            <h2><small><b>-Hostel<br>
+            <h2><small>
+               <b>-Hostel<br>
                 -Farm<br>
                 -Camping<br>
-                -Hiking</small></b>
+                -Hiking
+                </b></small>
             </h2>
             <div class="corner-header"></div>
         </header>
@@ -65,7 +67,8 @@
 
                     </li>
                     <li><a href="accomodations.html">Accomodations</a></li>
-                    <li><a href="activities.html">Activities</a>
+                    <li>
+                        <a href="activities.html">Activities</a>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -114,7 +117,7 @@
             </div>
             <p class='col-xs-12 col-sm-5 about-p'>
                 Worlds Apart is an organic farm and bed n' breakfast located in the surrounding hills of Barbosa, Antioquia, Colombia. Our key amenity is the tranquility of this quiet rural community. It is a very peaceful setting to clear your mind and replenish the spirit. The natural geography of the area presents amazing views of the Valley of Aburra. Within short walking distance of the farm you can find several nearby waterfalls with hidden choice swimming pools. Apart form the beauty of the landscape the exotic bird life is nothing short of spectacular.
-                <br>Futhermore, we are now offering work exchange programs to accommodate travelers interested in taking part in farm production.  This recent addition makes us one of the few work farms in Colombia.<br/>Our goal, at Worlds Apart, is to one day be a completely self-sufficient farm with all the comforts of five star lodging. At the moment, what we offer is rustic and humble at best but we're certain you'll find no shortage of hospitality or lack of comfort here at Worlds Apart.
+                <br>Futhermore, we are now offering work exchange programs to accommodate travelers interested in taking part in farm production. This recent addition makes us one of the few work farms in Colombia.<br/>Our goal, at Worlds Apart, is to one day be a completely self-sufficient farm with all the comforts of five star lodging. At the moment, what we offer is rustic and humble at best but we're certain you'll find no shortage of hospitality or lack of comfort here at Worlds Apart.
             </p>
 
         </section>
@@ -218,5 +221,45 @@
 
 
 </body>
+<script>
+    $(function() {
+        $('.zoom-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            closeOnContentClick: false,
+            closeBtnInside: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            image: {
+                verticalFit: true,
+                titleSrc: function(item) {
+                    return item.el.attr('title');
+                }
+            },
+            gallery: {
+                enabled: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300, // don't foget to change the duration also in CSS
+                opener: function(element) {
+                    return element.find('img');
+                }
+            }
+
+        });
+        $("[id^='gallery-tab-']").on('click', function () {
+        if ($(this).hasClass('active')) {} else {
+            var last = $("[id^='gallery-tab-'].active");
+            var lastIndex = $("[id^='gallery-tab-'].active").index() + 1;
+            var index = $(this).index() + 1;
+            $("#gallery > #gallery" + index).toggleClass('gallery-active gallery-inactive');
+            $("#gallery > #gallery" + lastIndex).toggleClass('gallery-active gallery-inactive');
+            last.toggleClass('active');
+            $(this).toggleClass('active');
+        }
+    });
+    })
+
+</script>
 
 </html>
