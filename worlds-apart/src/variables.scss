@@ -1,0 +1,74 @@
+/*--------------DEFAULT-----------------------------------------------
+
+main-color                                   #33b7b7
+main-color-light                             #ffffff
+main-color-dark                              #222
+text-main-color-light                        #ffffff
+text-main-color-dark                         #333
+
+----------------------------------------------------------------------------*/
+
+/* Colors*/
+
+/*Main colors*/
+
+$main-color: #33b7b7;
+$t-main-color: transparentize($main-color, 0.4);
+$d-main-color: darken($main-color, 10%);
+$darker-main-color: darken($main-color, 20%);
+
+/* Light main colors */
+
+$main-color-light: #ffffff;
+$t-main-color-light: transparentize($main-color-light, 0.4);
+$d-main-color-light: darken($main-color-light, 20%);
+$darker-main-color-light: darken($main-color-light, 20%);
+
+/* Dark main colors */
+
+$main-color-dark: #222;
+$t-main-color-dark: transparentize($main-color-dark, 0.4);
+$d-main-color-dark: darken($main-color-dark, 20%);
+$darker-main-color-dark: darken($main-color-dark, 20%);
+
+/*Main text colors */
+
+$text-main-color-light: #ffffff;
+$text-main-color-dark: #333;
+$t-text-main-color-light: lighten(transparentize($text-main-color-dark, 0.1), 30%);
+$d-text-main-color-light: darken($text-main-color-light, 20%);
+$darker-text-main-color-light: darken($text-main-color-light, 20%);
+$t-text-main-color-dark: lighten(transparentize($text-main-color-dark, 0.1), 30%);
+$d-text-main-color-dark: darken($text-main-color-dark, 20%);
+$darker-text-main-color-dark: darken($text-main-color-dark, 20%);
+
+/* Transitions */
+
+$main-transition: all 0.3s ease-in-out;
+$main-transition-slow: all 0.5s ease-in-out;
+
+/* Media Queries*/
+
+@mixin xs() {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin sm() {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
