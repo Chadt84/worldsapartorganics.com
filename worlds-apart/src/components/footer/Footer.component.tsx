@@ -4,9 +4,19 @@ import './Footer.component.scss';
 const Footer: React.FC = () => {
     const [pagePadding, setPagePadding] = useState(32);
     const cornersFactor = 1.25;
-    useEffect(() => {
+
+    const calculateOffset = () => {
+        console.log('calculate offset');
         const $page = document.getElementById('main-content');
         setPagePadding($page ? $page.offsetLeft : pagePadding);
+    };
+
+    useEffect(() => {
+        calculateOffset();
+        window.addEventListener('resize', calculateOffset);
+        return () => {
+            window.removeEventListener('resize', calculateOffset);
+        }
     });
     return (
         <footer className="container-fluid position-relative">
