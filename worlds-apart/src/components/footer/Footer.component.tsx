@@ -6,24 +6,36 @@ const Footer: React.FC = () => {
         <footer className="container-fluid">
             <div className="corner-footer-left "/>
             <div className="row footer">
-                <div className="container-fluid col-12">
-                    <h4 className="text-center"><strong>Worlds Apart</strong></h4>
-                    <ul className="list-unstyled text-primary col-sm-12 pull-left">
-                        <li className="col-sm-4">
-                            <i className="fa fa-3x fa-fw fa-mobile"/> +57 (301) 592-35-06
-                        </li>
-                        <li className="col-sm-4">
-                            <i className="fa fa-3x fa-fw fa-envelope-o "/>
-                            <a href="mailto:Worldsapartorganics@gmail.com ">Worldsapartorganics@gmail.com
-                            </a>
-                        </li>
-                        <li className="col-sm-4">
-                            <a href="https://www.facebook.com/worldsapartorganics/" target="_blank "><i
-                                className="fa fa-facebook fa-3x fa-fw "/></a> Worlds apart organic
-                        </li>
-                    </ul>
-                    <hr className="small"/>
-                    <div className="container-fluid">
+                <div className="container-fluid">
+                    <div className="row">
+                        <h5 className="text-center col-12"><strong>Worlds Apart</strong></h5>
+                        <div className="col-12 container-fluid">
+                            <ul className="list-unstyled text-primary row">
+                                <li className="col d-flex align-items-center">
+                                    <i className="fa fa-3x fa-fw fa-mobile"/> +57 (301) 592-35-06
+                                </li>
+                                <li className="col">
+                                    <a className=" d-flex align-items-center"
+                                       href="mailto:Worldsapartorganics@gmail.com ">
+                                        <i className="fa fa-3x fa-fw fa-envelope-o "/>
+                                        <span>worldsapartorganics@gmail.com</span>
+                                    </a>
+                                </li>
+                                <li className="col">
+                                    <a className="d-flex align-items-center"
+                                       href="https://www.facebook.com/worldsapartorganics/" target="_blank "><i
+                                        className="fa fa-facebook fa-3x fa-fw"/>Worlds apart organic</a>
+                                </li>
+                                <li className="col">
+                                    <a className="d-flex align-items-center"
+                                       href="https://www.instagram.com/worldsaparthostel/" target="_blank "><i
+                                        className="fa fa-instagram fa-3x fa-fw"/>Worlds apart organic</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr/>
+                    </div>
+                    <div className="row container-fluid">
                         <div className="row m-0 p-0 contentCopy">
                             <p>Copyright ©</p>
                             <div className='col'>

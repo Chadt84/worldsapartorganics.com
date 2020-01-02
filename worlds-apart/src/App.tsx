@@ -18,15 +18,10 @@ function App() {
                 <meta name="theme-color" content="#ffffff"/>
                 <title>Worlds Apart</title>
                 <link rel="icon" href={AppIcon} type="image/x-icon"/>
-                <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
-                <link href="../../css/bootstrap-theme.min.css" rel="stylesheet"/>
-                <link href="../../css/animate.css" rel="stylesheet"/>
                 <link href="../../css/magnific.css" rel="stylesheet"/>
                 <link href="../../css/imagehover.min.css" rel="stylesheet"/>
                 <link href="../../css/hamburgers.min.css" rel="stylesheet"/>
-                <link
-                    rel="stylesheet"
-                    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
             </Helmet>
             <div className="container page">
                 <Router>
@@ -39,7 +34,6 @@ function App() {
             <script src="../../js/ScrollMagic.min.js"/>
             <script src="../../js/plugins/animation.gsap.min.js"/>
             <script src="../../js/plugins/animation.velocity.min.js"/>
-            <script src="../../js/plugins/debug.addIndicators.min.js"/>
             <script src="../../js/plugins/jquery.ScrollMagic.min.js"/>
             <script src="../../js/parallax.min.js"/>
         </>

@@ -62,12 +62,10 @@ footer {
   .footer {
     border-top: 4px solid $d-main-color;
     font-family: 'Poiret One', serif;
-    padding: 2% 1% 0;
+    padding: 1em;
     background-color: $main-color;
     color: $text-main-color-light;
     z-index: 1;
-    position: relative;
-    top: -1px;
     @include xs() {
       background-color: $d-main-color;
       border-top: 4px solid $darker-main-color;
