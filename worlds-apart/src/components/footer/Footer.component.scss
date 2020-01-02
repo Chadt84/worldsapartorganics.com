@@ -1,0 +1,83 @@
+@import "../../variables";
+
+footer {
+  .corner-footer-right {
+    @include sm() {
+      position: absolute;
+      bottom: -30%;
+      left: 0;
+      border-bottom: 46px solid;
+      border-color: $darker-main-color;
+      border-left: 80px solid transparent;
+      z-index: 0;
+    }
+    @include md() {
+      position: absolute;
+      bottom: -30%;
+      left: 0;
+      border-bottom: 62px solid;
+      border-color: $darker-main-color;
+      border-left: 97px solid transparent;
+      z-index: 0;
+    }
+    @include lg() {
+      position: absolute;
+      bottom: -30%;
+      left: 0;
+      border-bottom: 101px solid;
+      border-color: $darker-main-color;
+      border-left: 209px solid transparent;
+      z-index: 0;
+    }
+  }
+  .corner-footer-left {
+    @include sm() {
+      position: absolute;
+      bottom: -30%;
+      right: 0;
+      border-bottom: 46px solid;
+      border-color: $darker-main-color;
+      border-right: 80px solid transparent;
+      z-index: 0;
+    }
+    @include md() {
+      position: absolute;
+      bottom: -30%;
+      right: 0;
+      border-bottom: 62px solid;
+      border-color: $darker-main-color;
+      border-right: 97px solid transparent;
+      z-index: 0;
+    }
+    @include lg() {
+      position: absolute;
+      bottom: -30%;
+      right: 0;
+      border-bottom: 101px solid;
+      border-color: $darker-main-color;
+      border-right: 209px solid transparent;
+      z-index: 0;
+    }
+  }
+  .footer {
+    border-top: 4px solid $d-main-color;
+    font-family: 'Poiret One', serif;
+    padding: 2% 1% 0;
+    background-color: $main-color;
+    color: $text-main-color-light;
+    z-index: 1;
+    position: relative;
+    top: -1px;
+    @include xs() {
+      background-color: $d-main-color;
+      border-top: 4px solid $darker-main-color;
+      color: $text-main-color-light;
+      ul {
+        li {
+          color: $text-main-color-light;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}

@@ -4,33 +4,36 @@ import Helmet from "react-helmet";
 import './App.scss';
 import {Header, Footer} from './components';
 import {routes} from "./pages";
+import AppIcon from './assets/img/Worlds apart organics.png';
 
 function App() {
     return (
-        <div className="page container">
+        <>
             <Helmet>
-                <meta charSet="utf-8" />
+                <meta charSet="utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="description" content=""/>
+                <meta name="author" content="Alejandro Chaves"/>
+                <meta name="msapplication-TileColor" content="#ffffff"/>
+                <meta name="theme-color" content="#ffffff"/>
                 <title>Worlds Apart</title>
+                <link rel="icon" href={AppIcon} type="image/x-icon"/>
                 <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
                 <link href="../../css/bootstrap-theme.min.css" rel="stylesheet"/>
                 <link href="../../css/animate.css" rel="stylesheet"/>
                 <link href="../../css/magnific.css" rel="stylesheet"/>
                 <link href="../../css/imagehover.min.css" rel="stylesheet"/>
                 <link href="../../css/hamburgers.min.css" rel="stylesheet"/>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-                <link rel="stylesheet/less" type="text/css" href="../../css/main.less"/>
-                <script src="../../js/less.min.js"/>
+                <link
+                    rel="stylesheet"
+                    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
             </Helmet>
-            <Router>
-                <Header/>
-                <Switch>
-                    {
-                        routes.map((route, i) =>
-                            <Route key={i} {...route}/>
-                        )
-                    }
-                </Switch>
-            </Router>
+            <div className="container page">
+                <Router>
+                    <Header/>
+                    <Switch>{routes.map((route, i) => <Route key={i} {...route}/>)}</Switch>
+                </Router>
+            </div>
             <Footer/>
             <script src="../../js/jquery.min.js"/>
             <script src="../../js/ScrollMagic.min.js"/>
@@ -39,7 +42,7 @@ function App() {
             <script src="../../js/plugins/debug.addIndicators.min.js"/>
             <script src="../../js/plugins/jquery.ScrollMagic.min.js"/>
             <script src="../../js/parallax.min.js"/>
-        </div>
+        </>
     );
 }
 
