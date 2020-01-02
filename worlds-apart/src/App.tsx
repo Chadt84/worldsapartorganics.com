@@ -23,7 +23,7 @@ function App() {
                 <link href="../../css/hamburgers.min.css" rel="stylesheet"/>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
             </Helmet>
-            <div className="container page">
+            <div className="container page" id="main-content">
                 <Router>
                     <Header/>
                     <Switch>{routes.map((route, i) => <Route key={i} {...route}/>)}</Switch>

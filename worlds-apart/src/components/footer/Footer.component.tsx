@@ -1,10 +1,29 @@
-import React from 'react';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
 import './Footer.component.scss';
 
 const Footer: React.FC = () => {
+    const [pagePadding, setPagePadding] = useState(32);
+    const cornersFactor = 1.25;
+    useEffect(() => {
+        const $page = document.getElementById('main-content');
+        setPagePadding($page ? $page.offsetLeft : pagePadding);
+    });
     return (
-        <footer className="container-fluid">
-            <div className="corner-footer-left "/>
+        <footer className="container-fluid position-relative">
+            <div
+                style={{
+                    borderRightWidth: pagePadding,
+                    borderBottomWidth: pagePadding / cornersFactor,
+                    top: -pagePadding / cornersFactor
+                }}
+                className="corner-footer-left"/>
+            <div
+                style={{
+                    borderLeftWidth: pagePadding,
+                    borderBottomWidth: pagePadding / cornersFactor,
+                    top: -pagePadding / cornersFactor
+                }}
+                className="corner-footer-right"/>
             <div className="row footer">
                 <div className="container-fluid">
                     <div className="row">

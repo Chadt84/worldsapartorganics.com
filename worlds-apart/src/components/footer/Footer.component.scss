@@ -2,62 +2,20 @@
 
 footer {
   .corner-footer-right {
-    @include sm() {
-      position: absolute;
-      bottom: -30%;
-      left: 0;
-      border-bottom: 46px solid;
-      border-color: $darker-main-color;
-      border-left: 80px solid transparent;
-      z-index: 0;
-    }
-    @include md() {
-      position: absolute;
-      bottom: -30%;
-      left: 0;
-      border-bottom: 62px solid;
-      border-color: $darker-main-color;
-      border-left: 97px solid transparent;
-      z-index: 0;
-    }
-    @include lg() {
-      position: absolute;
-      bottom: -30%;
-      left: 0;
-      border-bottom: 101px solid;
-      border-color: $darker-main-color;
-      border-left: 209px solid transparent;
-      z-index: 0;
-    }
+    color: $darker-main-color;
+    border-left: solid transparent;
+    border-bottom: solid;
+    position: absolute;
+    left: 0;
+    z-index: 0;
   }
   .corner-footer-left {
-    @include sm() {
-      position: absolute;
-      bottom: -30%;
-      right: 0;
-      border-bottom: 46px solid;
-      border-color: $darker-main-color;
-      border-right: 80px solid transparent;
-      z-index: 0;
-    }
-    @include md() {
-      position: absolute;
-      bottom: -30%;
-      right: 0;
-      border-bottom: 62px solid;
-      border-color: $darker-main-color;
-      border-right: 97px solid transparent;
-      z-index: 0;
-    }
-    @include lg() {
-      position: absolute;
-      bottom: -30%;
-      right: 0;
-      border-bottom: 101px solid;
-      border-color: $darker-main-color;
-      border-right: 209px solid transparent;
-      z-index: 0;
-    }
+    color: $darker-main-color;
+    border-right: solid transparent;
+    border-bottom: solid;
+    position: absolute;
+    right: 0;
+    z-index: 0;
   }
   .footer {
     border-top: 4px solid $d-main-color;
