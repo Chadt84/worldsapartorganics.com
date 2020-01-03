@@ -1,5 +1,8 @@
 @import "../../variables";
 
+a {
+  text-decoration: none !important;
+}
 .page-header {
   padding: 1em;
   position: relative;
@@ -72,19 +75,18 @@
       &:focus {
         color: $d-main-color;
       }
-      .open {
-        a {
-          transition: $main-transition;
-          color: $text-main-color-light;
+      &.active {
+        transition: $main-transition;
+        color: $text-main-color-light;
+        background: transparent none;
+        box-shadow: none;
+        border-bottom: solid 2px $d-main-color;
+        &:focus,
+        &:hover,
+        &:active {
+          color: $darker-main-color;
           background: transparent none;
           box-shadow: none;
-          &:focus,
-          &:hover,
-          &:active {
-            color: $darker-main-color;
-            background: transparent none;
-            box-shadow: none;
-          }
         }
       }
       .dropdown-menu {

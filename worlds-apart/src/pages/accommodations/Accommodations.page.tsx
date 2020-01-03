@@ -109,10 +109,10 @@ const Accommodations: React.FC = () => {
                 <div className="row">
                     <Carousel className="col-12 col-sm-6">
                         {
-                            cabinCarouselItems.map(({img, caption, options}) => {
+                            cabinCarouselItems.map(({img, caption, options}, i) => {
                                 const {label, description} = caption || {};
                                 return (
-                                    <Carousel.Item>
+                                    <Carousel.Item key={`img-${i}-${img}`}>
                                         <img
                                             className="d-block w-100"
                                             src={img}
@@ -159,10 +159,10 @@ const Accommodations: React.FC = () => {
                     </div>
                     <Carousel className="col-12 col-sm-6">
                         {
-                            cabinCarouselItems.map(({img, caption, options}) => {
+                            cabinCarouselItems.map(({img, caption, options}, i) => {
                                 const {label, description} = caption || {};
                                 return (
-                                    <Carousel.Item>
+                                    <Carousel.Item key={`img-${i}-${img}`}>
                                         <img
                                             className="d-block w-100"
                                             src={img}

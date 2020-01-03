@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {APP_ROUTES} from "../../pages";
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav";
@@ -24,14 +24,17 @@ const Header: React.FC = () => {
                 </h4>
                 <div className="corner-header"/>
             </header>
-            <Navbar className="page-navbar" expand="lg">
-                <Link className="navbar-item" to={APP_ROUTES.DEFAULT}><Navbar.Brand>
-                    <img className="brand-logo" src={brandLogo}/>
-                </Navbar.Brand></Link>
+            <Navbar className="page-navbar py-0" expand="lg">
+                <Link className="navbar-item py-2" to={APP_ROUTES.DEFAULT}>
+                    <Navbar.Brand>
+                        <img className="brand-logo" src={brandLogo}/>
+                    </Navbar.Brand></Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse className="navbar-collapse" id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link className="navbar-item"><Link to={APP_ROUTES.HOME}>Home</Link></Nav.Link>
+                    <Nav className="mr-auto d-flex align-items-center">
+                        <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.HOME}>
+                            Home
+                        </NavLink>
                         <NavDropdown className="navbar-item nav-dropdown" title="" id="basic-nav-dropdown-home">
                             <NavDropdown.Item className="dropdown-item">
                                 <Link to={`${APP_ROUTES.HOME}#about`}>About</Link>
@@ -44,9 +47,9 @@ const Header: React.FC = () => {
                             </NavDropdown.Item>
                         </NavDropdown>
 
-                        <Nav.Link className="navbar-item">
-                            <Link to={APP_ROUTES.ACCOMMODATIONS}>Accommodations</Link>
-                        </Nav.Link>
+                        <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.ACCOMMODATIONS}>
+                            Accommodations
+                        </NavLink>
                         <NavDropdown className="navbar-item nav-dropdown" title=""
                                      id="basic-nav-dropdown-accommodations">
                             <NavDropdown.Item className="dropdown-item">
@@ -57,8 +60,9 @@ const Header: React.FC = () => {
                             </NavDropdown.Item>
                         </NavDropdown>
 
-
-                        <Nav.Link className="navbar-item"><Link to={APP_ROUTES.ACTIVITIES}>Activities</Link></Nav.Link>
+                        <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.ACTIVITIES}>
+                            Activities
+                        </NavLink>
                         <NavDropdown className="navbar-item nav-dropdown" title="" id="basic-nav-dropdown-activities">
                             <NavDropdown.Item className="dropdown-item">
                                 <Link to={`${APP_ROUTES.ACTIVITIES}#parallax-1`}>Hiking</Link>
@@ -80,7 +84,9 @@ const Header: React.FC = () => {
                             </NavDropdown.Item>
                         </NavDropdown>
 
-                        <Nav.Link className="navbar-item"><Link to={APP_ROUTES.CONTACT}>Contact</Link></Nav.Link>
+                        <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.CONTACT}>
+                            Contact
+                        </NavLink>
                     </Nav>
                 </Navbar.Collapse>
                 <div className="corner-left hidden-xs"/>
