@@ -210,6 +210,28 @@ const Home: React.FC = () => {
     const selectGallery = (gallery: GALLERIES = GALLERIES.FARM) => {
         setSelectedGallery(gallery);
     };
+
+    const [margin, cols] = [10, 3];
+    const handleThumbnail = function () {
+        const $grid = document.getElementById('ReactGridGallery');
+        const maxWidth = (($grid ? $grid.offsetWidth : 190) / cols) - (cols * (margin + 10));
+        return {
+            background: 'black',
+            maxWidth: `${maxWidth}px`,
+        }
+    };
+    const handleTileViewport = function () {
+        return {
+            background: 'white',
+            padding: '5px',
+            cursor: 'pointer',
+            borderRadius: '2px',
+            boxShadow: '0 0 5px 0 rgba(0, 0, 0, 0.75)',
+            marginRight: `${margin}px`,
+            marginBottom: `${margin}px`,
+        }
+    };
+
     return (
         <React.Fragment>
             <Helmet>
@@ -294,7 +316,14 @@ const Home: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col gallery-active">
-                                <Gallery images={galleries[`${selectedGallery}GalleryItems`]} enableImageSelection={false}/>
+                                <Gallery
+                                    rowHeight={110}
+                                    margin={0}
+                                    images={galleries[`${selectedGallery}GalleryItems`]}
+                                    backdropClosesModal={true}
+                                    tileViewportStyle={handleTileViewport}
+                                    thumbnailStyle={handleThumbnail}
+                                    enableImageSelection={false}/>
                             </div>
                         </div>
                     </section>
@@ -307,7 +336,7 @@ const Home: React.FC = () => {
                         <i className="fa fa-map-marker fa-stack-1x"/>
                     </span>
                     <div className="btn btn-map col-12" onClick={toggleMap}>
-                        <p className="btn-map-text">{mapCollapsed ? 'Show' : 'Hide'} <b>map</b></p>
+                        <p className="btn-map-text">{mapCollapsed ? 'Show' : 'Hide'} <b className="text-white">map</b></p>
                         <i className={`${mapCollapsed ? 'fa-angle-double-down' : 'fa-angle-double-up'} arrow fa fa-2x col-sm-1`}/>
                     </div>
                     <div className={`${mapCollapsed ? 'collapse' : ''} col-12 map`}>

@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
                         <div className="col-12 container-fluid">
                             <ul className="list-unstyled text-primary row">
                                 <li className="col d-flex align-items-center">
-                                    <i className="fa fa-3x fa-fw fa-mobile"/> +57 (301) 592-35-06
+                                    <i className="fa fa-3x fa-fw fa-mobile"/> +57 (300) 549-60-13
                                 </li>
                                 <li className="col">
                                     <a className=" d-flex align-items-center"
@@ -53,12 +53,12 @@ const Footer: React.FC = () => {
                                 <li className="col">
                                     <a className="d-flex align-items-center"
                                        href="https://www.facebook.com/worldsapartorganics/" target="_blank "><i
-                                        className="fa fa-facebook fa-3x fa-fw"/>Worlds apart organic</a>
+                                        className="fa fa-facebook fa-3x fa-fw"/>Worlds apart organics, farm and bed n' breakfast</a>
                                 </li>
                                 <li className="col">
                                     <a className="d-flex align-items-center"
                                        href="https://www.instagram.com/worldsaparthostel/" target="_blank "><i
-                                        className="fa fa-instagram fa-3x fa-fw"/>Worlds apart organic</a>
+                                        className="fa fa-instagram fa-3x fa-fw"/>Worlds apart eco hotel</a>
                                 </li>
                             </ul>
                         </div>

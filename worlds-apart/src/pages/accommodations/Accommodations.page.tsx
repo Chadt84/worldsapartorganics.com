@@ -1,189 +1,219 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
+import {Link} from "react-router-dom";
+import Carousel, {CarouselProps} from 'react-bootstrap/Carousel';
+import "./Accommodations.page.scss";
 
+import Cabin1 from "../../assets/img/cabin/1.jpg";
+import Cabin2 from "../../assets/img/cabin/2.jpg";
+import Cabin3 from "../../assets/img/cabin/3.jpg";
+import Cabin4 from "../../assets/img/cabin/4.jpg";
+import Cabin5 from "../../assets/img/cabin/5.jpeg";
+import Cabin6 from "../../assets/img/cabin/6.jpg";
+import Cabin7 from "../../assets/img/cabin/7.jpg";
+import Cabin8 from "../../assets/img/cabin/8.jpg";
+import Cabin9 from "../../assets/img/cabin/9.jpg";
+import Cabin10 from "../../assets/img/cabin/10.jpg";
+import Cabin11 from "../../assets/img/cabin/11.jpg";
+
+const cabinCarouselItems: {
+    options?: CarouselProps,
+    img: string,
+    caption?: {
+        label: string,
+        description: string
+    }
+}[] =
+    [
+        {
+            img: Cabin1,
+            caption: {
+                label: '',
+                description: ''
+            }
+        }, {
+        img: Cabin2,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin3,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin4,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin5,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin6,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin7,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin8,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin9,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin10,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin11,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }
+    ];
 const Accommodations: React.FC = () => {
     return (
         <React.Fragment>
             <Helmet>
                 <title>Worlds apart - Accommodations</title>
             </Helmet>
-            <div className="cabin-title col-xs-12">The <b>cabins</b></div>
-            <div className='row col-xs-12'>
-                <div className='span12'>
-                    <hr/>
+            <div className="container pt-3">
+                <div className="row">
+                    <div className="cabin-title col-12">The <b>cabins</b></div>
+                    <div className='col-12 mb-3'>
+                        <hr/>
+                    </div>
                 </div>
-            </div>
-            <div className="col-xs-12 cabin-text">
-                <div id="myCarousel" className="carousel slide col-xs-12 col-sm-6" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" className="active"/>
-                        <li data-target="#myCarousel" data-slide-to="1"/>
-                        <li data-target="#myCarousel" data-slide-to="2"/>
-                        <li data-target="#myCarousel" data-slide-to="3"/>
-                        <li data-target="#myCarousel" data-slide-to="4"/>
-                        <li data-target="#myCarousel" data-slide-to="5"/>
-                        <li data-target="#myCarousel" data-slide-to="6"/>
-                        <li data-target="#myCarousel" data-slide-to="7"/>
-                        <li data-target="#myCarousel" data-slide-to="8"/>
-                        <li data-target="#myCarousel" data-slide-to="9"/>
-                        <li data-target="#myCarousel" data-slide-to="10"/>
-                    </ol>
-
-                    <div className="carousel-inner" role="listbox">
-                        <div className="item active">
-                            <img src="img/cabin/1.JPG" alt="Lounge"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/2.JPG" alt="Kitchen"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/3.JPG" alt="Kitchen"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/4.JPG" alt="Bathroom"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/5.jpeg" alt="Bathroom"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/6.JPG" alt="Cabin"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/7.JPG" alt="Roaster"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/8.JPG" alt="Cabin"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/9.JPG" alt="kiosko"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/10.JPG" alt="Bar"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/11.JPG" alt="Jacuzzi"/>
+                <div className="row">
+                    <Carousel className="col-12 col-sm-6">
+                        {
+                            cabinCarouselItems.map(({img, caption, options}) => {
+                                const {label, description} = caption || {};
+                                return (
+                                    <Carousel.Item>
+                                        <img
+                                            className="d-block w-100"
+                                            src={img}
+                                            alt={label}
+                                        />
+                                        <Carousel.Caption>
+                                            <h3>{label}</h3>
+                                            <p>{description}</p>
+                                        </Carousel.Caption>
+                                    </Carousel.Item>
+                                )
+                            })
+                        }
+                    </Carousel>
+                    <div className="col-12 col-sm-6 cabin-text pr-5">
+                        <p>
+                            Our cabins are fully independent, ideal for travelling couples or anyone who would prefer a
+                            little
+                            extra privacy. They are equipped with an electric stove and small refrigerator so guests
+                            may prepare food to their liking. If you're feeling up to some outdoor cooking there is a
+                            communal
+                            BBQ on
+                            site as well, which we strongly recommend. Just steps away from the cabin you'll find the
+                            gazebo or
+                            kiosko.
+                            This space is furnished with a ping pong table and small bar.
+                            It is a great place to relax, do some outdoor dinning, or enjoy some cocktails. From
+                            the gazebo you'll have a great view of all of Barbosa and our adjacent basketball court,
+                            great for
+                            three on
+                            three
+                            tournaments or just shooting around.
+                        </p>
+                        <div className="col-12 cabin-price">
+                            <p className="col-12 text-center"><b>COP $98.000</b></p>
+                            <p className="col-12 text-center">Per night/person</p>
                         </div>
                     </div>
                 </div>
-                <p className="col-sm-6 col-xs-12">
-                    Our cabins are fully independent, ideal for travelling couples or anyone who would prefer a little
-                    extra privacy. They are equipped with an electric stove and small refrigerator so guests
-                    may prepare food to their liking. If you're feeling up to some outdoor cooking there is a communal
-                    BBQ on
-                    site as well, which we strongly recommend. Just steps away from the cabin you'll find the gazebo or
-                    kiosko.
-                    This space is furnished with a ping pong table and small bar.
-                    It is a great place to relax, do some outdoor dinning, or enjoy some cocktails. From
-                    the gazebo you'll have a great view of all of Barbosa and our adjacent basketball court, great for
-                    three on
-                    three
-                    tournaments or just shooting around.
-                </p>
-            </div>
-            <div className="cabin-pricing col-xs-12">
-                <div className="col-xs-6 col-sm-4 cabin-price">
-                    <p className="col-xs-12 text-center"><b>COP $98.000</b></p>
-                    <p className="col-xs-12 text-center">Per night/person</p>
-                </div>
-                <a href="contact.html">
-                    <div className="col-xs-6 col-sm-8 text-center cabin-button"><b>Book</b> <span
-                        className="ml-1">now</span></div>
-                </a>
-            </div>
-            <div className="cabin-title col-xs-12">The <b>main</b> house</div>
-            <div className='row col-xs-12'>
-                <div className='span12'>
-                    <hr/>
-                </div>
-            </div>
-            <div className="col-xs-12 cabin-text">
-                <div id="myCarousel2" className="carousel slide col-xs-12 col-sm-6" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                        <li data-target="#myCarousel2" data-slide-to="0" className="active"/>
-                        <li data-target="#myCarousel2" data-slide-to="1"/>
-                        <li data-target="#myCarousel2" data-slide-to="2"/>
-                        <li data-target="#myCarousel2" data-slide-to="3"/>
-                        <li data-target="#myCarousel2" data-slide-to="4"/>
-                        <li data-target="#myCarousel2" data-slide-to="5"/>
-                        <li data-target="#myCarousel2" data-slide-to="6"/>
-                        <li data-target="#myCarousel2" data-slide-to="7"/>
-                        <li data-target="#myCarousel2" data-slide-to="8"/>
-                        <li data-target="#myCarousel2" data-slide-to="9"/>
-                        <li data-target="#myCarousel2" data-slide-to="10"/>
-                    </ol>
-
-                    <div className="carousel-inner" role="listbox">
-                        <div className="item active">
-                            <img src="img/cabin/1.JPG" alt="Lounge"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/2.JPG" alt="Kitchen"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/3.JPG" alt="Kitchen"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/4.JPG" alt="Bathroom"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/5.jpeg" alt="Bathroom"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/6.JPG" alt="Cabin"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/7.JPG" alt="Roaster"/>
-                        </div>
-
-                        <div className="item">
-                            <img src="img/cabin/8.JPG" alt="Cabin"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/9.JPG" alt="kiosko"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/10.JPG" alt="Bar"/>
-                        </div>
-                        <div className="item">
-                            <img src="img/cabin/11.JPG" alt="Jacuzzi"/>
+                <div className="row">
+                    <div className="cabin-title col-12">The <b>main</b> house</div>
+                    <div className='col-12 mb-3'>
+                        <hr/>
+                    </div>
+                    <Carousel className="col-12 col-sm-6">
+                        {
+                            cabinCarouselItems.map(({img, caption, options}) => {
+                                const {label, description} = caption || {};
+                                return (
+                                    <Carousel.Item>
+                                        <img
+                                            className="d-block w-100"
+                                            src={img}
+                                            alt={label}
+                                        />
+                                        <Carousel.Caption>
+                                            <h3>{label}</h3>
+                                            <p>{description}</p>
+                                        </Carousel.Caption>
+                                    </Carousel.Item>
+                                )
+                            })
+                        }
+                    </Carousel>
+                    <div className="col-12 col-sm-6 cabin-text">
+                        <p>
+                            Our cabins are fully independent, ideal for travelling couples or anyone who would prefer a
+                            little
+                            extra privacy. They are equipped with an electric stove and small refrigerator so guests
+                            may prepare food to their liking. If you're feeling up to some outdoor cooking there is a
+                            communal
+                            BBQ on
+                            site as well, which we strongly recommend. Just steps away from the cabin you'll find the
+                            gazebo or
+                            kiosko.
+                            This space is furnished with a ping pong table and small bar.
+                            It is a great place to relax, do some outdoor dinning, or enjoy some cocktails. From
+                            the gazebo you'll have a great view of all of Barbosa and our adjacent basketball court,
+                            great for
+                            three on
+                            three
+                            tournaments or just shooting around.
+                        </p>
+                        <div className="col-12 cabin-price">
+                            <p className="col-12 text-center"><b>COP $48.000</b></p>
+                            <p className="col-12 text-center">Per night/person</p>
+                            <p className="col-12 text-center"><b>COP $98.000</b></p>
+                            <p className="col-12 text-center">Per night/Private room</p>
                         </div>
                     </div>
                 </div>
-                <p className="col-sm-6 col-xs-12">
-                    Our cabins are fully independent, ideal for travelling couples or anyone who would prefer a little
-                    extra privacy. They are equipped with an electric stove and small refrigerator so guests
-                    may prepare food to their liking. If you're feeling up to some outdoor cooking there is a communal
-                    BBQ on
-                    site as well, which we strongly recommend. Just steps away from the cabin you'll find the gazebo or
-                    kiosko.
-                    This space is furnished with a ping pong table and small bar.
-                    It is a great place to relax, do some outdoor dinning, or enjoy some cocktails. From
-                    the gazebo you'll have a great view of all of Barbosa and our adjacent basketball court, great for
-                    three on
-                    three
-                    tournaments or just shooting around.
-                </p>
-            </div>
-            <div className="cabin-pricing col-xs-12">
-                <div className="col-xs-6 col-sm-4 cabin-price">
-                    <p className="col-xs-12 text-center"><b>COP $48.000</b></p>
-                    <p className="col-xs-12 text-center">Per night/person</p>
-                    <p className="col-xs-12 text-center"><b>COP $98.000</b></p>
-                    <p className="col-xs-12 text-center">Per night/Private room</p>
+                <div className="row">
+                    <div className="cabin-pricing col-12">
+                        <Link to='/contact'>
+                            <div className="col text-center cabin-button">
+                                <i className="fa fa-book mr-2"/>
+                                <b>Book</b> <span>now</span>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
-                <a href="contact.html">
-                    <div className="col-xs-6 col-sm-8 text-center cabin-button"><b>Book</b> <span
-                        className="ml-1">now</span></div>
-                </a>
             </div>
         </React.Fragment>
     )
