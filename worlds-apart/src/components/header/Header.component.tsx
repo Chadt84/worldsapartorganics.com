@@ -12,7 +12,7 @@ const Header: React.FC = () => {
         <>
             <header id="header" className="container-fluid page-header">
                 <h1>Worlds <b>Apart</b> <b>Eco-Hotel</b></h1>
-                <h3>
+                <h4>
                     <small>
                         <b>
                             - Paragliding<br/>
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
                             - Mountain biking<br/>
                         </b>
                     </small>
-                </h3>
+                </h4>
                 <div className="corner-header"/>
             </header>
             <Navbar className="page-navbar" expand="lg">

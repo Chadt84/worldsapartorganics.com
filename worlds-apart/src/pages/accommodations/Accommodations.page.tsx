@@ -5,7 +5,7 @@ const Accommodations: React.FC = () => {
     return (
         <React.Fragment>
             <Helmet>
-                <title>Worlds Apart - Accommodations</title>
+                <title>Worlds apart - Accommodations</title>
             </Helmet>
             <div className="cabin-title col-xs-12">The <b>cabins</b></div>
             <div className='row col-xs-12'>

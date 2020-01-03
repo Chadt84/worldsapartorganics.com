@@ -1,4 +1,5 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import * as _ from 'lodash';
 import './Footer.component.scss';
 
 const Footer: React.FC = () => {
@@ -6,16 +7,15 @@ const Footer: React.FC = () => {
     const cornersFactor = 1.25;
 
     const calculateOffset = () => {
-        console.log('calculate offset');
         const $page = document.getElementById('main-content');
         setPagePadding($page ? $page.offsetLeft : pagePadding);
     };
 
     useEffect(() => {
         calculateOffset();
-        window.addEventListener('resize', calculateOffset);
+        window.addEventListener('resize', _.throttle(calculateOffset, 100));
         return () => {
-            window.removeEventListener('resize', calculateOffset);
+            window.removeEventListener('resize', _.throttle(calculateOffset, 100));
         }
     });
     return (

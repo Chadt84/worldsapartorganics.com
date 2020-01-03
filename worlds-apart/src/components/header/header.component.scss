@@ -14,12 +14,12 @@
   b {
     color: $main-color;
   }
-  h3 {
+  h4 {
     color: $text-main-color-light;
     position: relative;
     z-index: 1;
     font-weight: bolder;
-    line-height: 0.9;
+    line-height: 1.2;
     margin-bottom: 0;
     b {
       color: $text-main-color-light;
@@ -53,10 +53,11 @@
   border-color: transparent;
   border-radius: 10px 10px 0 0;
   border-bottom: solid 7px $d-main-color;
-  position: relative;
-  z-index: 3;
+  z-index: 100;
   font-size: larger;
-  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  @include box-shadow(0.75);
   .navbar-brand > .brand-logo {
     max-height: 2rem;
   }
@@ -170,70 +171,24 @@
   .corner-right {
     position: absolute;
     z-index: 0;
-    @include sm() {
-      width: 0;
-      height: 0;
-      position: absolute;
-      bottom: -26px;
-      right: 0;
-      border-top: 20px solid;
-      border-color: $darker-main-color;
-      border-right: 20px solid transparent;
-    }
-    @include md() {
-      width: 0;
-      height: 0;
-      position: absolute;
-      bottom: -26px;
-      right: 0;
-      border-top: 20px solid;
-      border-color: $darker-main-color;
-      border-right: 20px solid transparent;
-    }
-    @include lg() {
-      width: 0;
-      height: 0;
-      position: absolute;
-      bottom: -26px;
-      right: 0;
-      border-top: 20px solid;
-      border-color: $darker-main-color;
-      border-right: 20px solid transparent;
-    }
+    width: 0;
+    height: 0;
+    bottom: -26px;
+    right: 0;
+    border-top: 20px solid;
+    border-color: $darker-main-color;
+    border-right: 20px solid transparent;
   }
   .corner-left {
     position: absolute;
     z-index: 0;
-    @include sm() {
-      width: 0;
-      height: 0;
-      position: absolute;
-      bottom: -26px;
-      left: 0;
-      border-top: 20px solid;
-      border-color: $darker-main-color;
-      border-left: 20px solid transparent;
-    }
-    @include md() {
-      width: 0;
-      height: 0;
-      position: absolute;
-      bottom: -26px;
-      left: 0;
-      border-top: 20px solid;
-      border-color: $darker-main-color;
-      border-left: 20px solid transparent;
-    }
-    @include lg() {
-      width: 0;
-      height: 0;
-      position: absolute;
-      bottom: -26px;
-      left: 0;
-      border-top: 20px solid;
-      border-color: $darker-main-color;
-      border-left: 20px solid transparent;
-    }
+    width: 0;
+    height: 0;
+    bottom: -26px;
+    left: 0;
+    border-top: 20px solid;
+    border-color: $darker-main-color;
+    border-left: 20px solid transparent;
   }
   @include xs() {
     transform: scaleX(1);

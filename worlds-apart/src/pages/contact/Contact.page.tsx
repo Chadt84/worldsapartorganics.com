@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
     return (
         <React.Fragment>
             <Helmet>
-                <title>Worlds Apart - Contact</title>
+                <title>Worlds apart - Contact</title>
             </Helmet>
             <div id="contact" className="col-md-12">
                 <p className="col-xs-12 col-sm-6">

@@ -72,3 +72,15 @@ $main-transition-slow: all 0.5s ease-in-out;
     @content;
   }
 }
+
+@mixin box-shadow($shadow : 0.5) {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, $shadow);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, $shadow);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, $shadow);
+}
+
+@mixin box-shadow-inset($shadow : 0.5) {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, $shadow) inset;
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, $shadow) inset;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, $shadow) inset;
+}

@@ -16,11 +16,8 @@ function App() {
                 <meta name="author" content="Alejandro Chaves"/>
                 <meta name="msapplication-TileColor" content="#ffffff"/>
                 <meta name="theme-color" content="#ffffff"/>
-                <title>Worlds Apart</title>
+                <title>Worlds apart</title>
                 <link rel="icon" href={AppIcon} type="image/x-icon"/>
-                <link href="../../css/magnific.css" rel="stylesheet"/>
-                <link href="../../css/imagehover.min.css" rel="stylesheet"/>
-                <link href="../../css/hamburgers.min.css" rel="stylesheet"/>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
             </Helmet>
             <div className="container page" id="main-content">
@@ -30,12 +27,6 @@ function App() {
                 </Router>
             </div>
             <Footer/>
-            <script src="../../js/jquery.min.js"/>
-            <script src="../../js/ScrollMagic.min.js"/>
-            <script src="../../js/plugins/animation.gsap.min.js"/>
-            <script src="../../js/plugins/animation.velocity.min.js"/>
-            <script src="../../js/plugins/jquery.ScrollMagic.min.js"/>
-            <script src="../../js/parallax.min.js"/>
         </>
     );
 }

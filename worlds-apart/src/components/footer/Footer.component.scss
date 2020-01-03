@@ -1,6 +1,7 @@
 @import "../../variables";
 
 footer {
+  @include box-shadow();
   .corner-footer-right {
     color: $darker-main-color;
     border-left: solid transparent;
