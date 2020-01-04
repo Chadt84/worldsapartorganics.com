@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import {Helmet} from "react-helmet";
 import Carousel, {CarouselProps} from 'react-bootstrap/Carousel';
 // @ts-ignore
-import Gallery from 'react-grid-gallery';
+// import Gallery from 'react-grid-gallery';
+import Gallery from 'react-photo-gallery';
 
 import "./Home.page.scss";
 import about1 from '../../assets/img/about/1.png';
@@ -316,14 +317,16 @@ const Home: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col gallery-active">
-                                <Gallery
+                                {/*<Gallery
                                     rowHeight={110}
                                     margin={0}
                                     images={galleries[`${selectedGallery}GalleryItems`]}
                                     backdropClosesModal={true}
                                     tileViewportStyle={handleTileViewport}
                                     thumbnailStyle={handleThumbnail}
-                                    enableImageSelection={false}/>
+                                    enableImageSelection={false}/>*/}
+                                    <Gallery photos={`${selectedGallery}GalleryItems`} />
+
                             </div>
                         </div>
                     </section>
