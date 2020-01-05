@@ -1,14 +1,23 @@
 import React from 'react';
 import {Switch, BrowserRouter as Router, Route} from "react-router-dom";
 import Helmet from "react-helmet";
+import * as contentful from 'contentful';
 import './App.scss';
 import {Header, Footer} from './components';
-import {routes} from "./pages";
+import {Activities, Home, routes} from "./pages";
+import {ContentApiContext} from "./api.context";
 import AppIcon from './assets/img/Worlds apart organics.png';
 
+
 function App() {
+    const contentfulClient = contentful.createClient({
+        space: "1zu4vi5fst65",
+        accessToken: "TnQpurv1MCI2-pQHaoF4t575B1vQTeXn5QkTRXPpSp8"
+    });
+
+    // @ts-ignore
     return (
-        <>
+        <ContentApiContext.Provider value={React.createContext(contentfulClient)}>
             <Helmet>
                 <meta charSet="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -18,7 +27,6 @@ function App() {
                 <meta name="theme-color" content="#ffffff"/>
                 <title>Worlds apart</title>
                 <link rel="icon" href={AppIcon} type="image/x-icon"/>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
             </Helmet>
             <div className="container page" id="main-content">
                 <Router>
@@ -27,7 +35,7 @@ function App() {
                 </Router>
             </div>
             <Footer/>
-        </>
+        </ContentApiContext.Provider>
     );
 }
 

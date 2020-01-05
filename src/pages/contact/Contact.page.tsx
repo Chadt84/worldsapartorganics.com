@@ -1,6 +1,8 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
 import "./Contact.page.scss";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelopeOpen} from "@fortawesome/free-regular-svg-icons/faEnvelopeOpen";
 
 const Contact: React.FC = () => {
     return (
@@ -38,7 +40,7 @@ const Contact: React.FC = () => {
                 </div>
             </div>
             <button type="button" id="submit" name="submit" className="btn btn-primary col-12 mt-2">
-                <i className="fa fa-3x fa-fw fa-envelope-o "/>
+                <FontAwesomeIcon size="3x" icon={faEnvelopeOpen}/>
                 <p>Send an <b className="text-white">e-mail</b></p>
             </button>
         </React.Fragment>

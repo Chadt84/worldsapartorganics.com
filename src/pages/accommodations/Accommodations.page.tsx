@@ -1,181 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Helmet} from "react-helmet";
 import {Link} from "react-router-dom";
 import ImageGallery from 'react-image-gallery';
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import "./Accommodations.page.scss";
 
-import Cabin1 from "../../assets/img/cabin/1.jpg";
-import Cabin2 from "../../assets/img/cabin/2.jpg";
-import Cabin3 from "../../assets/img/cabin/3.jpg";
-import Cabin4 from "../../assets/img/cabin/4.jpg";
-import Cabin5 from "../../assets/img/cabin/5.jpeg";
-import Cabin6 from "../../assets/img/cabin/6.jpg";
-import Cabin7 from "../../assets/img/cabin/7.jpg";
-import Cabin8 from "../../assets/img/cabin/8.jpg";
-import Cabin9 from "../../assets/img/cabin/9.jpg";
-import Cabin10 from "../../assets/img/cabin/10.jpg";
-import Cabin11 from "../../assets/img/cabin/11.jpg";
-
-const cabinCarouselItems: {
-    img: string,
-    caption?: {
-        label: string,
-        description: string
-    }
-}[] =
-    [
-        {
-            img: Cabin1,
-            caption: {
-                label: '',
-                description: ''
-            }
-        }, {
-        img: Cabin2,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin3,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin4,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin5,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin6,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin7,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin8,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin9,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin10,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin11,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }
-    ];
-const houseCarouselItems: {
-    img: string,
-    caption?: {
-        label: string,
-        description: string
-    }
-}[] =
-    [
-        {
-            img: Cabin1,
-            caption: {
-                label: '',
-                description: ''
-            }
-        }, {
-        img: Cabin2,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin3,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin4,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin5,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin6,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin7,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin8,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin9,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin10,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }, {
-        img: Cabin11,
-        caption: {
-            label: '',
-            description: ''
-        }
-    }
-    ];
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faExpand} from "@fortawesome/free-solid-svg-icons/faExpand";
+import {faCompress} from "@fortawesome/free-solid-svg-icons/faCompress";
+import {faChevronLeft} from "@fortawesome/free-solid-svg-icons/faChevronLeft";
+import {faChevronRight} from "@fortawesome/free-solid-svg-icons/faChevronRight";
+import {faBook} from "@fortawesome/free-solid-svg-icons/faBook";
+import {contentfulClient} from "../../api.context";
+import {faCircleNotch} from "@fortawesome/free-solid-svg-icons/faCircleNotch";
 
 interface AccommodationProps {
-    carousel: any[],
+    gallery: any[],
     title: string,
+    content: any,
     id: string
 }
 
-const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title, id}) => {
+const Accommodation: React.FC<AccommodationProps> = ({content, gallery, title, id}) => {
     const toSplice = title.split(' ');
     const spliced = toSplice.pop();
     return (
@@ -186,11 +32,7 @@ const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title,
             </div>
             <div className="col-12 col-sm-6">
                 <ImageGallery
-                    items={carousel.map((x: any) => ({
-                        ...x,
-                        original: x.img,
-                        thumbnail: x.img
-                    }))}
+                    items={gallery}
                     lazyLoad={true}
                     showPlayButton={false}
                     showBullets={true}
@@ -202,7 +44,7 @@ const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title,
                             className="btn btn-clear image-gallery-button left"
                             disabled={isDisabled}
                             onClick={onClick}>
-                            <i className="fa fa-chevron-left"/>
+                            <FontAwesomeIcon icon={faChevronLeft}/>
                         </button>
                     )}
                     renderRightNav={(onClick, isDisabled) => (
@@ -210,7 +52,7 @@ const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title,
                             className="btn btn-clear image-gallery-button right"
                             disabled={isDisabled}
                             onClick={onClick}>
-                            <i className="fa fa-chevron-right"/>
+                            <FontAwesomeIcon icon={faChevronRight}/>
                         </button>
                     )}
                     renderFullscreenButton={(onClick, isFullScreen) => {
@@ -221,7 +63,7 @@ const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title,
                                     `btn btn-clear image-gallery-fullScreen-button ${isFullScreen ? ' active' : ''}`}
                                 onClick={onClick}
                             >
-                                <i className={`fa fa-${isFullScreen ? 'collapse' : 'expand'}`}/>
+                                <FontAwesomeIcon icon={isFullScreen ? faCompress : faExpand}/>
                             </button>
                         );
                     }}
@@ -233,80 +75,62 @@ const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title,
                 />
             </div>
             <div className="col-12 col-sm-6 cabin-text pr-5">
-                {children}
+                {documentToReactComponents(content)}
             </div>
         </div>
     )
 };
 
 const Accommodations: React.FC = () => {
+    const [accommodations, setAccommodations] = useState([]);
+    const [hasLoaded, setHasLoaded] = useState(false);
+    const loadAccommodations = async () => {
+        let {items}: any = await contentfulClient.getEntries({
+            'content_type': 'accommodation',
+            order: 'sys.createdAt'
+        });
+        let newAccommodations = items.map((item: any) => ({...item.fields, id: item.sys.id}));
+        for (let i = 0; i < newAccommodations.length; i++) {
+            let gallery = newAccommodations[i].gallery;
+            for (let j = 0; j < gallery.length; j++) {
+                let photo = gallery[j];
+                photo = {id: photo.sys.id, ...photo.fields};
+                const res = await contentfulClient.getAsset(photo.id);
+                const img = `https:${res?.fields?.file?.url}`;
+                gallery[j] = {...photo, thumbnail: img, original: img};
+            }
+        }
+        setAccommodations(newAccommodations);
+        setHasLoaded(true);
+    };
+    useEffect(() => {
+        loadAccommodations()
+    }, []);
     return (
         <React.Fragment>
             <Helmet>
                 <title>Worlds apart - Accommodations</title>
             </Helmet>
+            {!hasLoaded && (<div className="loading-activities">
+                <div className="d-block text-center">
+                    <FontAwesomeIcon spin={true} icon={faCircleNotch}/>
+                    <div className="text-muted">Loading accommodations...</div>
+                </div>
+            </div>)}
             <div className="container pt-3">
-                <Accommodation id='cabin' title='The cabins' carousel={cabinCarouselItems}>
-                    <p>
-                        Our cabins are fully independent, ideal for travelling couples or anyone who would
-                        prefer a
-                        little
-                        extra privacy. They are equipped with an electric stove and small refrigerator so guests
-                        may prepare food to their liking. If you're feeling up to some outdoor cooking there is
-                        a
-                        communal
-                        BBQ on
-                        site as well, which we strongly recommend. Just steps away from the cabin you'll find
-                        the
-                        gazebo or
-                        kiosko.
-                        This space is furnished with a ping pong table and small bar.
-                        It is a great place to relax, do some outdoor dinning, or enjoy some cocktails. From
-                        the gazebo you'll have a great view of all of Barbosa and our adjacent basketball court,
-                        great for
-                        three on
-                        three
-                        tournaments or just shooting around.
-                    </p>
-                    <div className="col-12 cabin-price">
-                        <p className="col-12 text-center"><b>COP $98.000</b></p>
-                        <p className="col-12 text-center">Per night/person</p>
-                    </div>
-                </Accommodation>
-                <Accommodation id='main-house' title='The main house' carousel={houseCarouselItems}>
-                    <p>
-                        Our cabins are fully independent, ideal for travelling couples or anyone who would
-                        prefer a
-                        little
-                        extra privacy. They are equipped with an electric stove and small refrigerator so guests
-                        may prepare food to their liking. If you're feeling up to some outdoor cooking there is
-                        a
-                        communal
-                        BBQ on
-                        site as well, which we strongly recommend. Just steps away from the cabin you'll find
-                        the
-                        gazebo or
-                        kiosko.
-                        This space is furnished with a ping pong table and small bar.
-                        It is a great place to relax, do some outdoor dinning, or enjoy some cocktails. From
-                        the gazebo you'll have a great view of all of Barbosa and our adjacent basketball court,
-                        great for
-                        three on
-                        three
-                        tournaments or just shooting around.
-                    </p>
-                    <div className="col-12 cabin-price">
-                        <p className="col-12 text-center"><b>COP $48.000</b></p>
-                        <p className="col-12 text-center">Per night/person</p>
-                        <p className="col-12 text-center"><b>COP $98.000</b></p>
-                        <p className="col-12 text-center">Per night/Private room</p>
-                    </div>
-                </Accommodation>
+                {
+                    accommodations.map((accommodation: any) => (
+                        <Accommodation
+                            id={accommodation.title.replace(/\s+/g, '-').toLowerCase()}
+                            {...accommodation}
+                        />
+                    ))
+                }
                 <div className="row">
                     <div className="cabin-pricing col-12">
                         <Link to='/contact'>
                             <div className="col text-center cabin-button">
-                                <i className="fa fa-book mr-2"/>
+                                <FontAwesomeIcon className="mr-2" icon={faBook}/>
                                 <b>Book</b> <span>now</span>
                             </div>
                         </Link>

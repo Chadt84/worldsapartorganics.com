@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import * as _ from 'lodash';
 import './Footer.component.scss';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faMobile} from "@fortawesome/free-solid-svg-icons/faMobile";
+import {faEnvelopeOpen} from "@fortawesome/free-solid-svg-icons/faEnvelopeOpen";
+import {faFacebook} from "@fortawesome/free-brands-svg-icons/faFacebook";
+import {faInstagram} from "@fortawesome/free-brands-svg-icons/faInstagram";
 
 const Footer: React.FC = () => {
     const [pagePadding, setPagePadding] = useState(32);
@@ -41,24 +46,29 @@ const Footer: React.FC = () => {
                         <div className="col-12 container-fluid">
                             <ul className="list-unstyled text-primary row">
                                 <li className="col d-flex align-items-center">
-                                    <i className="fa fa-3x fa-fw fa-mobile"/> +57 (300) 549-60-13
+                                    <FontAwesomeIcon size="2x" icon={faMobile}/>
+                                    <span className="ml-2">+57 (300) 549-60-13</span>
                                 </li>
                                 <li className="col">
                                     <a className=" d-flex align-items-center"
                                        href="mailto:Worldsapartorganics@gmail.com ">
-                                        <i className="fa fa-3x fa-fw fa-envelope-o "/>
-                                        <span>worldsapartorganics@gmail.com</span>
+                                        <FontAwesomeIcon size="2x" icon={faEnvelopeOpen}/>
+                                        <span className="ml-2">worldsapartorganics@gmail.com</span>
                                     </a>
                                 </li>
                                 <li className="col">
                                     <a className="d-flex align-items-center"
-                                       href="https://www.facebook.com/worldsapartorganics/" target="_blank "><i
-                                        className="fa fa-facebook fa-3x fa-fw"/>Worlds apart organics, farm and bed n' breakfast</a>
+                                       href="https://www.facebook.com/worldsapartorganics/" target="_blank ">
+                                        <FontAwesomeIcon size="2x" icon={faFacebook}/>
+                                        <span className="ml-2">Worlds apart organics, farm and bed n'breakfast</span>
+                                    </a>
                                 </li>
                                 <li className="col">
                                     <a className="d-flex align-items-center"
-                                       href="https://www.instagram.com/worldsaparthostel/" target="_blank "><i
-                                        className="fa fa-instagram fa-3x fa-fw"/>Worlds apart eco hotel</a>
+                                       href="https://www.instagram.com/worldsaparthostel/" target="_blank ">
+                                        <FontAwesomeIcon size="2x" icon={faInstagram}/>
+                                        <span className="ml-2">Worlds apart eco hotel</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

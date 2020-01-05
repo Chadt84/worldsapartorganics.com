@@ -132,3 +132,11 @@
     }
   }
 }
+.loading-activities {
+  display: flex;
+  height: 90vh;
+  color: $main-color;
+  font-size: 4em;
+  justify-content: center;
+  align-items: center;
+}

@@ -38,6 +38,10 @@ import place2 from '../../assets/img/gallery/general/4.png';
 import place3 from '../../assets/img/gallery/general/6.png';
 import place4 from '../../assets/img/gallery/general/7.png';
 import place5 from '../../assets/img/gallery/general/8.png';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faMap} from "@fortawesome/free-regular-svg-icons/faMap";
+import {faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons/faAngleDoubleDown";
+import {faAngleDoubleUp} from "@fortawesome/free-solid-svg-icons/faAngleDoubleUp";
 
 enum GALLERIES {
     FARM = 'farm',
@@ -291,9 +295,6 @@ const Home: React.FC = () => {
             </section>
             <div className="container-fluid" id="gallery">
                 <div className="row">
-                    <a className="gallery-up visible-xs">
-                        <i className="fa fa-arrow-circle-o-up  fa-3x" aria-hidden="true"/>
-                    </a>
                     <section className="col-12 text-center container-fluid">
                         <div className="row align-items-start">
                             <div id="gallery-nav" className="container-fluid col-12 col-sm-auto nav-pills nav-stacked">
@@ -332,13 +333,13 @@ const Home: React.FC = () => {
             <div className="container-fluid">
                 <div id="map" className="row map">
                     <span className="fa-stack fa-lg col-12 text-center">
-                        <i className="fa fa-map fa-stack-2x"/>
-                        <i className="fa fa-map-marker fa-stack-1x"/>
+                        <FontAwesomeIcon className="fa-stack-2x" icon={faMap}/>
                     </span>
                     <div className="btn btn-map col-12" onClick={toggleMap}>
-                        <p className="btn-map-text">{mapCollapsed ? 'Show' : 'Hide'} <b className="text-white">map</b>
+                        <p className="btn-map-text">
+                            {mapCollapsed ? 'Show' : 'Hide'} <b className="text-white">map</b>
                         </p>
-                        <i className={`${mapCollapsed ? 'fa-angle-double-down' : 'fa-angle-double-up'} arrow fa fa-2x col-sm-1`}/>
+                        <FontAwesomeIcon size="2x" icon={mapCollapsed ? faAngleDoubleDown : faAngleDoubleUp}/>
                     </div>
                     <div className={`${mapCollapsed ? 'collapse' : ''} col-12 map`}>
                         <iframe

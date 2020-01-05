@@ -103,7 +103,7 @@ const Header: React.FC = () => {
                                 </div>
                             </Link>
 
-                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#horseback`}>
+                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#horseback-riding`}>
                                 <div className="dropdown-item">
                                     Horseback Riding
                                 </div>
