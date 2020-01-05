@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
+import {HashLink as Link} from 'react-router-hash-link';
 import {APP_ROUTES} from "../../pages";
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav";
@@ -25,7 +26,7 @@ const Header: React.FC = () => {
                 <div className="corner-header"/>
             </header>
             <Navbar className="page-navbar py-0" expand="lg">
-                <Link className="navbar-item py-2" to={APP_ROUTES.DEFAULT}>
+                <Link smooth={true} className="navbar-item py-2" to={APP_ROUTES.DEFAULT}>
                     <Navbar.Brand>
                         <img className="brand-logo" src={brandLogo}/>
                     </Navbar.Brand></Link>
@@ -35,16 +36,24 @@ const Header: React.FC = () => {
                         <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.HOME}>
                             Home
                         </NavLink>
-                        <NavDropdown className="navbar-item nav-dropdown" title="" id="basic-nav-dropdown-home">
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.HOME}#about`}>About</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.HOME}#gallery`}>Gallery</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.HOME}#map`}>Map</Link>
-                            </NavDropdown.Item>
+                        <NavDropdown className="navbar-item" title="" id="basic-nav-dropdown-home">
+                            <Link smooth={true} to={`${APP_ROUTES.HOME}#about`}>
+                                <div className="dropdown-item">
+                                    About
+                                </div>
+                            </Link>
+                            <Link smooth={true} to={`${APP_ROUTES.HOME}#gallery`}>
+                                <div className="dropdown-item">
+                                    Gallery
+                                </div>
+                            </Link>
+
+                            <Link smooth={true} to={`${APP_ROUTES.HOME}#map`}>
+                                <div className="dropdown-item">
+                                    Map
+                                </div>
+                            </Link>
+
                         </NavDropdown>
 
                         <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.ACCOMMODATIONS}>
@@ -52,36 +61,60 @@ const Header: React.FC = () => {
                         </NavLink>
                         <NavDropdown className="navbar-item nav-dropdown" title=""
                                      id="basic-nav-dropdown-accommodations">
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACCOMMODATIONS}#cabin`}>Cabin</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACCOMMODATIONS}#mainHouse`}>Main house</Link>
-                            </NavDropdown.Item>
+                            <Link smooth={true} to={`${APP_ROUTES.ACCOMMODATIONS}#cabin`}>
+                                <div className="dropdown-item">
+                                    Cabin
+                                </div>
+                            </Link>
+
+                            <Link smooth={true} to={`${APP_ROUTES.ACCOMMODATIONS}#mainHouse`}>
+                                <div className="dropdown-item">
+                                    Main house
+                                </div>
+                            </Link>
+
                         </NavDropdown>
 
                         <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.ACTIVITIES}>
                             Activities
                         </NavLink>
                         <NavDropdown className="navbar-item nav-dropdown" title="" id="basic-nav-dropdown-activities">
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACTIVITIES}#parallax-1`}>Hiking</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACTIVITIES}#parallax-2`}>Paragliding</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACTIVITIES}#parallax-3`}>Mountain Biking</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACTIVITIES}#parallax-4`}>Workshops</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACTIVITIES}#parallax-5`}>Horseback Riding</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="dropdown-item">
-                                <Link to={`${APP_ROUTES.ACTIVITIES}#parallax-6`}>Canyoning</Link>
-                            </NavDropdown.Item>
+                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#hiking`}>
+                                <div className="dropdown-item">
+                                    Hiking
+                                </div>
+                            </Link>
+
+                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#paragliding`}>
+                                <div className="dropdown-item">
+                                    Paragliding
+                                </div>
+                            </Link>
+
+                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#mountain-biking`}>
+                                <div className="dropdown-item">
+                                    Mountain Biking
+                                </div>
+                            </Link>
+
+                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#workshops`}>
+                                <div className="dropdown-item">
+                                    Workshops
+                                </div>
+                            </Link>
+
+                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#horseback`}>
+                                <div className="dropdown-item">
+                                    Horseback Riding
+                                </div>
+                            </Link>
+
+                            <Link smooth={true} to={`${APP_ROUTES.ACTIVITIES}#cannyoning`}>
+                                <div className="dropdown-item">
+                                    Canyoning
+                                </div>
+                            </Link>
+
                         </NavDropdown>
 
                         <NavLink className="navbar-item" activeClassName='active' to={APP_ROUTES.CONTACT}>

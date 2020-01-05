@@ -25,7 +25,7 @@ const Activities: React.FC = () => {
                 bgImageAlt="the dog"
                 strength={strength}
             >
-                <div className="row align-items-center align-content-center parallax-window">
+                <div className="row align-items-center align-content-center parallax-window" id="hiking">
                     <div className="col-5 text-activities-left">
                         <div className="title-activities col-12">Hiking</div>
                         <p>We offer several free guided hikes, all within reasonable distance of the farm. The most
@@ -66,7 +66,7 @@ const Activities: React.FC = () => {
                 bgImageAlt="the dog"
                 strength={strength}
             >
-                <div className="row align-items-center align-content-center parallax-window">
+                <div className="row align-items-center align-content-center parallax-window" id="paragliding">
                     <div className="col-5 offset-7 text-activities-right">
                         <div className="title-activities col-12">Paragliding</div>
                         <p>From El Alto de Matasanos we offer tandem paragliding. The point of take off has an elevation
@@ -92,7 +92,7 @@ const Activities: React.FC = () => {
                 bgImageAlt="the dog"
                 strength={strength}
             >
-                <div className="row align-items-center align-content-center parallax-window">
+                <div className="row align-items-center align-content-center parallax-window" id="mountain-biking">
                     <div className="col-5 text-activities-left">
                         <div className="title-activities col-12">Mountain biking</div>
                         <p>For groups of 2-6 persons we offer the Mocorongo Milk Run. It is roughly ten kilometers of
@@ -139,7 +139,7 @@ const Activities: React.FC = () => {
                 bgImageAlt="the dog"
                 strength={strength}
             >
-                <div className="row align-items-center align-content-center parallax-window">
+                <div className="row align-items-center align-content-center parallax-window" id="workshops">
                     <div className="col-5 offset-7 text-activities-right">
                         <div className="title-activities col-12">Workshops</div>
                         <p>Our workshops at Wolds Apart can be divided into two categories. Permaculture and
@@ -166,7 +166,7 @@ const Activities: React.FC = () => {
                 bgImageAlt="the dog"
                 strength={strength}
             >
-                <div className="row align-items-center align-content-center parallax-window">
+                <div className="row align-items-center align-content-center parallax-window" id="horseback">
                     <div className="col-5 text-activities-left">
                         <div className="title-activities col-12">Horseback Riding</div>
                         <p>In collaboration with some of the local horse stables we organize several guided horseback
@@ -188,7 +188,7 @@ const Activities: React.FC = () => {
                 bgImageAlt="the dog"
                 strength={strength}
             >
-                <div className="row align-items-center align-content-center parallax-window">
+                <div className="row align-items-center align-content-center parallax-window" id="cannyoning">
                     <div className="col-5 offset-7 text-activities-right">
                         <div className="title-activities col-12">Cannyoning</div>
                         <p>
