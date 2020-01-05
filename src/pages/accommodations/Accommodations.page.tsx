@@ -92,17 +92,94 @@ const cabinCarouselItems: {
         }
     }
     ];
+const houseCarouselItems: {
+    img: string,
+    caption?: {
+        label: string,
+        description: string
+    }
+}[] =
+    [
+        {
+            img: Cabin1,
+            caption: {
+                label: '',
+                description: ''
+            }
+        }, {
+        img: Cabin2,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin3,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin4,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin5,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin6,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin7,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin8,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin9,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin10,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }, {
+        img: Cabin11,
+        caption: {
+            label: '',
+            description: ''
+        }
+    }
+    ];
 
 interface AccommodationProps {
     carousel: any[],
-    title?: string
+    title: string,
+    id: string
 }
 
-const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title = ''}) => {
+const Accommodation: React.FC<AccommodationProps> = ({children, carousel, title, id}) => {
     const toSplice = title.split(' ');
     const spliced = toSplice.pop();
     return (
-        <div className="row">
+        <div className="row" id={id}>
             <div className="cabin-title col-12">{toSplice.join(' ')} <b>{spliced}</b></div>
             <div className='col-12 mb-3'>
                 <hr/>
@@ -169,7 +246,7 @@ const Accommodations: React.FC = () => {
                 <title>Worlds apart - Accommodations</title>
             </Helmet>
             <div className="container pt-3">
-                <Accommodation title='The cabins' carousel={cabinCarouselItems}>
+                <Accommodation id='cabin' title='The cabins' carousel={cabinCarouselItems}>
                     <p>
                         Our cabins are fully independent, ideal for travelling couples or anyone who would
                         prefer a
@@ -196,7 +273,7 @@ const Accommodations: React.FC = () => {
                         <p className="col-12 text-center">Per night/person</p>
                     </div>
                 </Accommodation>
-                <Accommodation title='The main house' carousel={cabinCarouselItems}>
+                <Accommodation id='main-house' title='The main house' carousel={houseCarouselItems}>
                     <p>
                         Our cabins are fully independent, ideal for travelling couples or anyone who would
                         prefer a

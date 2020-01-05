@@ -237,7 +237,7 @@ const Home: React.FC = () => {
             <Helmet>
                 <title>Worlds apart - Home</title>
             </Helmet>
-            <section className="container-fluid">
+            <section className="container-fluid" id="about">
                 <div className="row align-items-start">
                     <Carousel className="col-12 col-sm-6">
                         {
@@ -289,14 +289,14 @@ const Home: React.FC = () => {
                     </p>
                 </div>
             </section>
-            <div className="container-fluid">
+            <div className="container-fluid" id="gallery">
                 <div className="row">
-                    <a className="gallery-up visible-xs" href="#gallery-nav">
+                    <a className="gallery-up visible-xs">
                         <i className="fa fa-arrow-circle-o-up  fa-3x" aria-hidden="true"/>
                     </a>
-                    <section id="gallery" className="col-12 text-center container-fluid">
+                    <section className="col-12 text-center container-fluid">
                         <div className="row align-items-start">
-                            <div id="gallery-nav" className="container-fluid col-auto nav-pills nav-stacked ">
+                            <div id="gallery-nav" className="container-fluid col-12 col-sm-auto nav-pills nav-stacked">
                                 <div className="row">
                                     <li
                                         onClick={() => selectGallery(GALLERIES.FARM)}
@@ -315,7 +315,7 @@ const Home: React.FC = () => {
                                     </li>
                                 </div>
                             </div>
-                            <div className="col gallery-active">
+                            <div className="col-12 col-sm gallery-active">
                                 <Gallery
                                     rowHeight={110}
                                     margin={0}
@@ -336,7 +336,8 @@ const Home: React.FC = () => {
                         <i className="fa fa-map-marker fa-stack-1x"/>
                     </span>
                     <div className="btn btn-map col-12" onClick={toggleMap}>
-                        <p className="btn-map-text">{mapCollapsed ? 'Show' : 'Hide'} <b className="text-white">map</b></p>
+                        <p className="btn-map-text">{mapCollapsed ? 'Show' : 'Hide'} <b className="text-white">map</b>
+                        </p>
                         <i className={`${mapCollapsed ? 'fa-angle-double-down' : 'fa-angle-double-up'} arrow fa fa-2x col-sm-1`}/>
                     </div>
                     <div className={`${mapCollapsed ? 'collapse' : ''} col-12 map`}>

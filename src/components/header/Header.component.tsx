@@ -67,7 +67,7 @@ const Header: React.FC = () => {
                                 </div>
                             </Link>
 
-                            <Link smooth={true} to={`${APP_ROUTES.ACCOMMODATIONS}#mainHouse`}>
+                            <Link smooth={true} to={`${APP_ROUTES.ACCOMMODATIONS}#main-house`}>
                                 <div className="dropdown-item">
                                     Main house
                                 </div>
@@ -122,8 +122,8 @@ const Header: React.FC = () => {
                         </NavLink>
                     </Nav>
                 </Navbar.Collapse>
-                <div className="corner-left hidden-xs"/>
-                <div className="corner-right hidden-xs"/>
+                <div className="corner-left d-none d-sm-block"/>
+                <div className="corner-right d-none d-sm-block"/>
             </Navbar>
         </>
     )
