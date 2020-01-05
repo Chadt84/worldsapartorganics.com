@@ -8,7 +8,8 @@
 @import "variables.scss";
 
 body {
-  background-size: contain;
+  background-position-x: right;
+  background-size: contain !important;
   background: $d-main-color url(assets/img/bg3.png) no-repeat;
   font-family: 'PT Sans', sans-serif;
   a {
