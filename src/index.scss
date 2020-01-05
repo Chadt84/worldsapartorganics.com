@@ -1,0 +1,217 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+/* Import */
+@import "variables.scss";
+
+body {
+  background-size: contain;
+  background: $d-main-color url(assets/img/bg3.png) no-repeat;
+  font-family: 'PT Sans', sans-serif;
+  a {
+    transition: $main-transition;
+    text-shadow: none;
+    color: currentColor;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $darker-main-color;
+    }
+  }
+  .page {
+    background-color: $main-color-light;
+    padding: 0;
+    @include box-shadow();
+    .carousel {
+      padding: 0;
+    }
+    .cabin-text {
+      padding: 1px 0 50px 50px;
+      @include xs() {
+        padding: 0;
+        margin-top: 10px;
+        p {
+          padding: 10px 20px 20px;
+          margin-top: 10px;
+          border-top: solid 1px #eee;
+        }
+      }
+    }
+    .cabin-title {
+      padding: 0 40px;
+      font-family: 'Poiret One', serif;
+      color: $main-color;
+      font-size: xx-large;
+    }
+    .cabin-pricing {
+      background-color: $main-color;
+      color: $text-main-color-light;
+      font-family: 'Poiret One', serif;
+      font-size: x-large;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      .cabin-price {
+        padding-top: 10px;
+        min-height: 166px;
+        border-right: solid 1px $main-color-light;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        .cabin-button {
+          padding: 30px;
+          min-height: 166px;
+          transition: $main-transition;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          b {
+            margin-right: 1rem;
+          }
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: $d-main-color;
+            color: $darker-main-color;
+          }
+        }
+      }
+    }
+  }
+  @include lg() {
+    background-size: contain;
+  }
+  @media (min-width: 2397px) {
+    background-size: cover;
+  }
+}
+
+@media (min-width: 979px) {
+  .dropdown {
+    ul.dropdown-menu {
+      transition: $main-transition;
+    }
+    &:hover {
+      ul.dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: $d-main-color;
+}
+
+.text-primary {
+  color: $text-main-color-light !important;
+}
+
+.text-muted {
+  color: $d-text-main-color-light;
+  font-size: 15px;
+  text-align: right;
+  font-weight: bolder;
+}
+
+.list-unstyled {
+  font-size: small;
+}
+
+.btn-primary {
+  transition: $main-transition;
+  border-radius: 0;
+  font-family: 'Poiret One', serif;
+  background: $main-color none;
+  border: none;
+  font-size: x-large;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $d-main-color;
+    color: $darker-main-color;
+  }
+}
+
+:placeholder-shown {
+  transition: $main-transition;
+  &:active,
+  &:focus {
+    border-color: $main-color;
+    box-shadow: none;
+  }
+}
+
+.mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: $main-color-dark;
+  opacity: 0.8;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  color: $main-color-light;
+}
+
+.mfp-arrow-right:before {
+  border-left: 27px solid $main-color-light;
+}
+
+.mfp-arrow-right:after {
+  border-left: 17px solid $main-color-light;
+}
+
+.mfp-arrow-left:after {
+  border-right: 17px solid $main-color-light;
+}
+
+.mfp-arrow-left:before {
+  border-right: 27px solid $main-color-light;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  width: 80%;
+  border-top: 1px solid #eee;
+  position: relative;
+  left: -3%;
+}
+
+@include xs() {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: $darker-main-color;
+    background-color: transparent;
+  }
+}
+
+:focus {
+  outline: -webkit-focus-ring-color none;
+}
+
+.btn-active {
+  background-color: $d-main-color;
+  transition: $main-transition !important;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $d-main-color !important;
+    color: $darker-main-color !important;
+  }
+}
+

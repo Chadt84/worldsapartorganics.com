@@ -1,0 +1,57 @@
+@import "../../variables";
+
+.image-gallery-button {
+  position: absolute;
+  color: rgba($main-color-light, 0.5);
+  font-size: 5em;
+  z-index: 1;
+  top: 25%;
+  transition: $main-transition;
+  &.right {
+    right: 0;
+  }
+  &.left {
+    left: 0;
+  }
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.image-gallery-fullScreen-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  color: rgba($main-color-light, 0.5);
+  font-size: 1.5rem;
+  transition: $main-transition;
+  &:hover {
+    color: $main-color
+  }
+}
+
+.image-gallery-thumbnail {
+  border: solid 2px transparent;
+  border-radius: 2px;
+  @include box-shadow();
+  &.active {
+    border-color: $main-color;
+  }
+  &:hover {
+    border-color: $darker-main-color;
+  }
+}
+
+.image-gallery-thumbnail-image {
+  display: block;
+  border-radius: 2px;
+}
+
+.image-gallery-bullet {
+  background-color: rgba($main-color-light, 0.5) !important;
+  &.active {
+    background-color: $main-color !important;
+    border-color: $darker-main-color;
+  }
+}
