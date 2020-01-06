@@ -1,0 +1,22 @@
+@import "../../variables";
+
+.not-found {
+  height: 60vh;
+  font-family: 'Poiret One', serif;
+  .error {
+    color: lightcoral;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .redirect {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    .fa {
+      olor: $main-color;
+    }
+    a {
+      text-decoration: underline !important;
+      color: $main-color;
+    }
+  }
+}
