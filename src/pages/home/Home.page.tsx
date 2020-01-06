@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { useHistory } from "react-router-dom";
 import {Helmet} from "react-helmet";
 import Carousel from 'react-bootstrap/Carousel';
 import * as _ from 'lodash';
@@ -15,15 +16,20 @@ import {faAngleDoubleUp} from "@fortawesome/free-solid-svg-icons/faAngleDoubleUp
 import {contentfulClient} from "../../api.context";
 import {faCircleNotch} from "@fortawesome/free-solid-svg-icons/faCircleNotch";
 
-const Home: React.FC = () => {
+const Home: React.FC = (props: any) => {
     const [mapCollapsed, setMapCollapsed] = useState(true);
     const [selectedGallery, setSelectedGallery] = useState('');
     const [margin, cols] = [10, 3];
     const [home, setHome] = useState<any>({});
     const [galleries, setGalleries] = useState<any>([]);
     const [hasLoaded, setHasLoaded] = useState(false);
+    const history = useHistory();
 
     useEffect(() => {
+        const newloc = props.location.search.split('?p=');
+        if (newloc[1]) {
+            history.replace(newloc[1]);
+        }
         loadHome();
         loadGallery();
     }, []);
@@ -100,9 +106,9 @@ const Home: React.FC = () => {
                         <div className="row align-items-start">
                             <Carousel className="col-12 col-sm-6">
                                 {
-                                    home.gallery.map(({img, title, description}: any) => {
+                                    home.gallery.map(({img, title, description}: any, i: number) => {
                                         return (
-                                            <Carousel.Item>
+                                            <Carousel.Item key={i}>
                                                 <img
                                                     className="d-block w-100"
                                                     src={img}
@@ -129,8 +135,9 @@ const Home: React.FC = () => {
                                          className="container-fluid col-12 col-sm-auto nav-pills nav-stacked">
                                         <div className="row">
                                             {
-                                                galleries.map(({group, title}: any) => (
+                                                galleries.map(({group, title}: any, i: number) => (
                                                     <li
+                                                        key={i}
                                                         className={selectedGallery === group ? 'active' : ''}
                                                         onClick={() => selectGallery(group)}>
                                                         {title}

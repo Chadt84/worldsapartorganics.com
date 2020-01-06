@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Switch, BrowserRouter as Router, Route} from "react-router-dom";
 import Helmet from "react-helmet";
 import * as contentful from 'contentful';
 import './App.scss';
 import {Header, Footer} from './components';
-import {Activities, Home, routes} from "./pages";
+import {routes} from "./pages";
 import {ContentApiContext} from "./api.context";
 import AppIcon from './assets/img/Worlds apart organics.png';
 
@@ -29,9 +29,9 @@ function App() {
                 <link rel="icon" href={AppIcon} type="image/x-icon"/>
             </Helmet>
             <div className="container page" id="main-content">
-                <Router>
+                <Router basename="/">
                     <Header/>
-                    <Switch>{routes.map((route, i) => <Route key={i} {...route}/>)}</Switch>
+                    <Switch>{routes.map((route: any, i: number) => <Route key={i} {...route}/>)}</Switch>
                 </Router>
             </div>
             <Footer/>
