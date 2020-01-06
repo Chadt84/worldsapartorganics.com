@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.33dd21d1.chunk.css",
-    "main.js": "/static/js/main.cc7950c3.chunk.js",
-    "main.js.map": "/static/js/main.cc7950c3.chunk.js.map",
+    "main.js": "/static/js/main.33ddb37d.chunk.js",
+    "main.js.map": "/static/js/main.33ddb37d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e3318b70.js",
     "runtime-main.js.map": "/static/js/runtime-main.e3318b70.js.map",
-    "static/js/2.18e76bf9.chunk.js": "/static/js/2.18e76bf9.chunk.js",
-    "static/js/2.18e76bf9.chunk.js.map": "/static/js/2.18e76bf9.chunk.js.map",
+    "static/js/2.9e20fc8c.chunk.js": "/static/js/2.9e20fc8c.chunk.js",
+    "static/js/2.9e20fc8c.chunk.js.map": "/static/js/2.9e20fc8c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ad6a1768ce04b355bf39d0d48af847ae.js": "/precache-manifest.ad6a1768ce04b355bf39d0d48af847ae.js",
+    "precache-manifest.8fa26418d654fc80e0a0178d20d421c3.js": "/precache-manifest.8fa26418d654fc80e0a0178d20d421c3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.33dd21d1.chunk.css.map": "/static/css/main.33dd21d1.chunk.css.map",
-    "static/js/2.18e76bf9.chunk.js.LICENSE": "/static/js/2.18e76bf9.chunk.js.LICENSE",
+    "static/js/2.9e20fc8c.chunk.js.LICENSE": "/static/js/2.9e20fc8c.chunk.js.LICENSE",
     "static/media/Worlds apart organics.png": "/static/media/Worlds apart organics.18bd2634.png",
     "static/media/index.scss": "/static/media/bg3.6f196ad5.png",
     "static/media/header.component.scss": "/static/media/header.e8b842e4.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e3318b70.js",
-    "static/js/2.18e76bf9.chunk.js",
+    "static/js/2.9e20fc8c.chunk.js",
     "static/css/main.33dd21d1.chunk.css",
-    "static/js/main.cc7950c3.chunk.js"
+    "static/js/main.33ddb37d.chunk.js"
   ]
 }
