@@ -4,7 +4,6 @@ import "./Not-found.page.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBomb} from "@fortawesome/free-solid-svg-icons/faBomb";
 import {Link} from "react-router-dom";
-import {APP_ROUTES} from "../pages.routes";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons/faChevronLeft";
 
 const NotFound: React.FC = () => {

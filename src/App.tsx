@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Switch, BrowserRouter as Router, Route} from "react-router-dom";
 import Helmet from "react-helmet";
 import * as contentful from 'contentful';
