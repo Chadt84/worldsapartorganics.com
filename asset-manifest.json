@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.f523d13a.chunk.css",
+    "main.css": "/static/css/main.b3cc3632.chunk.css",
     "main.js": "/static/js/main.9141078f.chunk.js",
     "main.js.map": "/static/js/main.9141078f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e3318b70.js",
@@ -8,18 +8,18 @@
     "static/js/2.f81db1d8.chunk.js": "/static/js/2.f81db1d8.chunk.js",
     "static/js/2.f81db1d8.chunk.js.map": "/static/js/2.f81db1d8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.c9fc037bfbdd2c5a501645ea9cd24a32.js": "/precache-manifest.c9fc037bfbdd2c5a501645ea9cd24a32.js",
+    "precache-manifest.950356222f0b15580617659d797f113f.js": "/precache-manifest.950356222f0b15580617659d797f113f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.f523d13a.chunk.css.map": "/static/css/main.f523d13a.chunk.css.map",
+    "static/css/main.b3cc3632.chunk.css.map": "/static/css/main.b3cc3632.chunk.css.map",
     "static/js/2.f81db1d8.chunk.js.LICENSE": "/static/js/2.f81db1d8.chunk.js.LICENSE",
     "static/media/Worlds apart organics.png": "/static/media/Worlds apart organics.18bd2634.png",
-    "static/media/index.scss": "/static/media/bg3.129d107d.gif",
+    "static/media/index.scss": "/static/media/bg3.e565f806.gif",
     "static/media/header.component.scss": "/static/media/header.67eebf34.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e3318b70.js",
     "static/js/2.f81db1d8.chunk.js",
-    "static/css/main.f523d13a.chunk.css",
+    "static/css/main.b3cc3632.chunk.css",
     "static/js/main.9141078f.chunk.js"
   ]
 }
