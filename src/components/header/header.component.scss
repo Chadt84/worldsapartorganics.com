@@ -188,8 +188,7 @@ a {
     height: 0;
     bottom: -26px;
     right: 0;
-    border-top: 20px solid;
-    border-color: $darker-main-color;
+    border-top: 20px solid $darker-main-color;
     border-right: 20px solid transparent;
   }
   .corner-left {
@@ -199,8 +198,7 @@ a {
     height: 0;
     bottom: -26px;
     left: 0;
-    border-top: 20px solid;
-    border-color: $darker-main-color;
+    border-top: 20px solid $darker-main-color;
     border-left: 20px solid transparent;
   }
   @include xs() {
