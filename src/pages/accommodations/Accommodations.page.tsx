@@ -119,8 +119,9 @@ const Accommodations: React.FC = () => {
             </div>)}
             <div className="container pt-3">
                 {
-                    accommodations.map((accommodation: any) => (
+                    accommodations.map((accommodation: any, index: number) => (
                         <Accommodation
+                            key={accommodation.id}
                             id={accommodation.title.replace(/\s+/g, '-').toLowerCase()}
                             {...accommodation}
                         />

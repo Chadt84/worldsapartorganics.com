@@ -122,9 +122,9 @@ const Home: React.FC = (props: any) => {
                                     })
                                 }
                             </Carousel>
-                            <p className='col-xs-12 col-sm-6 p-5 text-justify about-p'>
+                            <div className='col-xs-12 col-sm-6 p-5 text-justify about-p'>
                                 {documentToReactComponents(home.description)}
-                            </p>
+                            </div>
                         </div>
                     </section>
                     <div className="container-fluid" id="gallery">
@@ -156,6 +156,8 @@ const Home: React.FC = (props: any) => {
                                                     .map(({fields}: any) => ({
                                                         src: `https:${fields.file.url}`,
                                                         thumbnail: `https:${fields.file.url}`,
+                                                        thumbnailWidth: 500,
+                                                        thumbnailHeight: 500
                                                     }))}
                                             backdropClosesModal={true}
                                             tileViewportStyle={handleTileViewport}
@@ -179,7 +181,7 @@ const Home: React.FC = (props: any) => {
                             </div>
                             <div className={`${mapCollapsed ? 'collapse' : ''} col-12 map`}>
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40267.72250284975!2d-75.36307828761437!3d6.469112126453668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnNDkuMiJOIDc1wrAyMCcwNy4xIlc!5e0!3m2!1ses-419!2sco!4v1461606818429"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40267.72250284975!2d-75.36307828761437!3d6.469112126453668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f14.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnNDkuMiJOIDc1wrAyMCcwNy4xIlc!5e0!3m2!1ses-419!2sco!4v1461606818429"
                                     frameBorder="0" allowFullScreen/>
                             </div>
                         </div>

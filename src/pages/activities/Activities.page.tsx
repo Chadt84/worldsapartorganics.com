@@ -27,7 +27,7 @@ const Activity: React.FC<{
         >
             <div className="row align-items-center align-content-center parallax-window"
                  id={name.replace(/\s+/g, '-').toLowerCase()}>
-                <div className="col-5 text-activities-left">
+                <div className="col-5 text-activities">
                     <div className="title-activities col-12">{name}</div>
                     {children}
                 </div>
