@@ -132,7 +132,7 @@ const Home: React.FC = (props: any) => {
                             <section className="col-12 text-center container-fluid">
                                 <div className="row align-items-start">
                                     <div id="gallery-nav"
-                                         className="container-fluid col-12 col-sm-auto nav-pills nav-stacked">
+                                         className="container-fluid col-12 col-sm-auto nav-pills nav-stacked mt-5">
                                         <div className="row">
                                             {
                                                 galleries.map(({group, title}: any, i: number) => (

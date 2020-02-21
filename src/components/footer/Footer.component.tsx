@@ -76,15 +76,15 @@ const Footer: React.FC = () => {
                     </div>
                     <div className="row container-fluid mt-3">
                         <div className="row m-0 p-0 contentCopy align-items-center">
-                            <p className="col-auto m-0">Copyright ©</p>
-                            <div className='col-auto'>
-                                <a href="http://mariaviiia.com" target="_blank">
-                                    <img src="http://mariaviiia.com/static/media/LOGO.3db595a5.svg" className="copyright"/>
-                                </a>
-                            </div>
+                            <p className="col-auto m-0">©Copyright 2020</p>
                             <div className="col-auto">
                                 <a href="https://alejandrochvs.com" target="_blank">
                                     <img src="https://alejandrochvs.com/assets/logo.png" className="copyright"/>
+                                </a>
+                            </div>
+                            <div className='col-auto'>
+                                <a href="http://mariaviiia.com" target="_blank">
+                                    <img src="http://mariaviiia.com/static/media/LOGO.3db595a5.svg" className="copyright"/>
                                 </a>
                             </div>
                         </div>
