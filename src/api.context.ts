@@ -4,6 +4,6 @@ import * as contentful from "contentful";
 export const ContentApiContext = React.createContext({});
 
 export const contentfulClient = contentful.createClient({
-    space: "1zu4vi5fst65",
-    accessToken: "TnQpurv1MCI2-pQHaoF4t575B1vQTeXn5QkTRXPpSp8"
+    space: "e1plazcjxdju",
+    accessToken: "EyUuq3vhd6A0jwVMftZ8BHPaD0MtO7KNCbkDZo2kSqw"
 });
